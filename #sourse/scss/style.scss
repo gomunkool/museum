@@ -1,0 +1,245 @@
+// обнуление
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: block;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+//переменные
+$color-black: #030303;
+$color-wite: #ffffff;
+$roboto: Roboto;
+$forum: Forum;
+
+//proect
+//main
+body {
+  font-family: $forum;
+}
+.countaner {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+.main {
+  background-color: $color-black;
+}
+.header {
+  padding: 59px 0 26px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    .logo__image {
+      display: block;
+      height: 26px;
+      width: 49px;
+      background: url(../../image/main/logo.png) no-repeat center;
+    }
+    .logo__title {
+      color: $color-wite;
+      font-size: 28px;
+      line-height: 31px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-left: 25px;
+    }
+  }
+  .nav {
+    display: flex;
+    flex: 0 1 775px;
+    align-items: center;
+    justify-content: space-between;
+    .nav__item {
+      color: $color-wite;
+      font-family: $roboto;
+      font-weight: 200;
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: 2px;
+    }
+  }
+}
+.title {
+  color: $color-wite;
+  font-family: $forum;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.welcome {
+  background: url(../../image/main/picture1.png) no-repeat right;
+  padding: 182px 0 272px 0;
+  .welcome__title {
+    max-width: 600px;
+    margin-bottom: 25px;
+  }
+  .welcome__text {
+    color: $color-wite;
+    font-family: $roboto;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 33px;
+
+    letter-spacing: 2px;
+  }
+  .welcome__button {
+    margin: 75px 0 0 0;
+    width: 360px;
+    height: 75px;
+    background-color: #710707;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .welcome__button-text {
+    color: $color-wite;
+    font-family: $roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 2px;
+  }
+}
+.scrole {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: $color-black;
+  width: 600px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 75px;
+  .scrole__numbers {
+    display: flex;
+    justify-content: center;
+    :first-child {
+      margin-right: 10px;
+    }
+    :first-child::after {
+      margin-left: 10px;
+      content: '|';
+    }
+    .scrole__number {
+      color: $color-wite;
+      font-family: $roboto;
+      font-size: 22px;
+      line-height: 40px;
+      text-transform: uppercase;
+    }
+  }
+  .scrole__squares {
+    display: flex;
+    justify-content: space-between;
+    height: 180px;
+    align-items: center;
+
+    .scrole__squares-square {
+      display: block;
+      margin: 0 12.5px;
+      width: 16px;
+      height: 16px;
+      background-color: $color-wite;
+    }
+    :first-child {
+      background-color: #d2b183;
+    }
+  }
+  .scrole__arows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 70px;
+    height: 10px;
+
+    .scrole__arows-left {
+      background: url(../../image/main/left.png) no-repeat center;
+      display: block;
+      width: 30px;
+      height: 8px;
+      margin: 0 10px 0 0;
+    }
+    .scrole__arows-right {
+      background: url(../../image/main/right.png) no-repeat center;
+      display: block;
+      width: 30px;
+      height: 8px;
+      margin: 0 0 0 10px;
+    }
+  }
+}

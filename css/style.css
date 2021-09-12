@@ -1,0 +1,251 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: Forum;
+}
+
+.countaner {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main {
+  background-color: #030303;
+}
+
+.header {
+  padding: 59px 0 26px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+.header .logo .logo__image {
+  display: block;
+  height: 26px;
+  width: 49px;
+  background: url(../../image/main/logo.png) no-repeat center;
+}
+.header .logo .logo__title {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 31px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-left: 25px;
+}
+.header .nav {
+  display: flex;
+  flex: 0 1 775px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .nav .nav__item {
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+}
+
+.title {
+  color: #ffffff;
+  font-family: Forum;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.welcome {
+  background: url(../../image/main/picture1.png) no-repeat right;
+  padding: 182px 0 272px 0;
+}
+.welcome .welcome__title {
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+.welcome .welcome__text {
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 2px;
+}
+.welcome .welcome__button {
+  margin: 75px 0 0 0;
+  width: 360px;
+  height: 75px;
+  background-color: #710707;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.welcome .welcome__button-text {
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+}
+
+.scrole {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #030303;
+  width: 600px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 75px;
+}
+.scrole .scrole__numbers {
+  display: flex;
+  justify-content: center;
+}
+.scrole .scrole__numbers :first-child {
+  margin-right: 10px;
+}
+.scrole .scrole__numbers :first-child::after {
+  margin-left: 10px;
+  content: "|";
+}
+.scrole .scrole__numbers .scrole__number {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 22px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+.scrole .scrole__squares {
+  display: flex;
+  justify-content: space-between;
+  height: 180px;
+  align-items: center;
+}
+.scrole .scrole__squares .scrole__squares-square {
+  display: block;
+  margin: 0 12.5px;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+}
+.scrole .scrole__squares :first-child {
+  background-color: #d2b183;
+}
+.scrole .scrole__arows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 70px;
+  height: 10px;
+}
+.scrole .scrole__arows .scrole__arows-left {
+  background: url(../../image/main/left.png) no-repeat center;
+  display: block;
+  width: 30px;
+  height: 8px;
+  margin: 0 10px 0 0;
+}
+.scrole .scrole__arows .scrole__arows-right {
+  background: url(../../image/main/right.png) no-repeat center;
+  display: block;
+  width: 30px;
+  height: 8px;
+  margin: 0 0 0 10px;
+}
