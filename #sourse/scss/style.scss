@@ -340,3 +340,56 @@ body {
   }
 }
 // video
+.video {
+  display: flex;
+  justify-content: space-between;
+  padding: 75px 0;
+  align-items: center;
+  .video__title {
+    color: $color-gold;
+    font-family: $forum;
+    flex: 0 1 auto;
+  }
+  .video__text {
+    font-family: $roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 38px;
+    color: $color-black;
+    max-width: 720px;
+  }
+}
+
+.player {
+  .player__main {
+    max-width: 1440px;
+    max-height: 650px;
+  }
+  .player__flex {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  iframe {
+    width: 452px;
+    height: 254px;
+  }
+}
+.video__scrole {
+  display: flex;
+  margin: 0 auto;
+  width: 200px;
+  justify-content: space-between;
+  padding-bottom: 75px;
+
+  .video__scrole-item {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #999999;
+  }
+  .video__scrole-item-activ {
+    background-color: #333333;
+  }
+}
