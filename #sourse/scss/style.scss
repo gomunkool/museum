@@ -75,6 +75,7 @@ h6 {
 //переменные
 $color-black: #030303;
 $color-wite: #ffffff;
+$color-gold: #9d8665;
 $roboto: Roboto;
 $forum: Forum;
 
@@ -243,3 +244,99 @@ body {
     }
   }
 }
+// slider
+
+.slider__title {
+  color: $color-gold;
+  padding: 25px 0;
+  margin: 50px 0;
+  border-bottom: 3px #710707 solid;
+}
+.plases {
+  padding: 25px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .plase {
+    flex: 0 1 auto;
+    padding-bottom: 75px;
+
+    .plase__img {
+      max-width: 440px;
+      max-height: 285px;
+    }
+  }
+  .plase__title {
+    max-width: 300px;
+    font-family: $forum;
+    color: $color-gold;
+    border-bottom: 3px #710707 solid;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: 5px;
+    margin: 25px 0 12px 0;
+    padding-bottom: 10px;
+  }
+  .plase__view {
+    font-family: $roboto;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  .plase__text {
+    font-family: $roboto;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+// info about picture
+.info {
+  background-color: $color-black;
+  .info__flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 75px 0;
+  }
+  .info__info {
+    max-width: 660px;
+  }
+  .info__title {
+    max-width: 660px;
+    padding-bottom: 25px;
+    margin-bottom: 75px;
+    font-family: $forum;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    border-bottom: 3px #710707 solid;
+  }
+  .info__text {
+    color: $color-wite;
+    font-family: $roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 38px;
+    p {
+      margin-bottom: 25px;
+    }
+    span {
+      color: $color-gold;
+    }
+  }
+  .info__picture {
+    background: url(../../image/info/Rectangle.png) no-repeat center;
+    width: 720px;
+    height: 700px;
+    margin-top: 15px;
+    position: relative;
+    .line {
+      position: absolute;
+      top: 0;
+      left: 421px;
+    }
+  }
+}
+// video
