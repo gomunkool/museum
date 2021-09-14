@@ -92,9 +92,10 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
+  border: 1px wheat solid;
 }
 
-.main {
+.welcome {
   background-color: #030303;
 }
 
@@ -124,9 +125,9 @@ body {
 }
 .header .nav {
   display: flex;
-  flex: 0 1 775px;
   align-items: center;
   justify-content: space-between;
+  width: 775px;
 }
 .header .nav .nav__item {
   color: #ffffff;
@@ -146,15 +147,15 @@ body {
   text-transform: uppercase;
 }
 
-.welcome {
+.welcome__count {
   background: url(../../image/main/picture1.png) no-repeat right;
   padding: 182px 0 272px 0;
 }
-.welcome .welcome__title {
+.welcome__count .welcome__title {
   max-width: 600px;
   margin-bottom: 25px;
 }
-.welcome .welcome__text {
+.welcome__count .welcome__text {
   color: #ffffff;
   font-family: Roboto;
   font-weight: 300;
@@ -162,7 +163,7 @@ body {
   line-height: 33px;
   letter-spacing: 2px;
 }
-.welcome .welcome__button {
+.welcome__count .welcome__button {
   margin: 75px 0 0 0;
   width: 360px;
   height: 75px;
@@ -173,7 +174,7 @@ body {
   text-align: center;
   justify-content: center;
 }
-.welcome .welcome__button-text {
+.welcome__count .welcome__button-text {
   color: #ffffff;
   font-family: Roboto;
   font-weight: 300;
@@ -296,18 +297,18 @@ body {
   line-height: 21px;
 }
 
-.info {
+.explore {
   background-color: #030303;
 }
-.info .info__flex {
+.explore .explore__flex {
   display: flex;
   justify-content: space-between;
   padding: 75px 0;
 }
-.info .info__info {
+.explore .explore__info {
   max-width: 660px;
 }
-.info .info__title {
+.explore .explore__title {
   max-width: 660px;
   padding-bottom: 25px;
   margin-bottom: 75px;
@@ -317,44 +318,44 @@ body {
   letter-spacing: 5px;
   border-bottom: 3px #710707 solid;
 }
-.info .info__text {
+.explore .explore__text {
   color: #ffffff;
   font-family: Roboto;
   font-weight: 300;
   font-size: 22px;
   line-height: 38px;
 }
-.info .info__text p {
+.explore .explore__text p {
   margin-bottom: 25px;
 }
-.info .info__text span {
+.explore .explore__text span {
   color: #9d8665;
 }
-.info .info__picture {
+.explore .explore__picture {
   background: url(../../image/info/Rectangle.png) no-repeat center;
   width: 720px;
   height: 700px;
   margin-top: 15px;
   position: relative;
 }
-.info .info__picture .line {
+.explore .explore__picture .line {
   position: absolute;
   top: 0;
   left: 421px;
 }
 
-.video {
+.video__flex {
   display: flex;
   justify-content: space-between;
   padding: 75px 0;
   align-items: center;
 }
-.video .video__title {
+.video__flex .video__title {
   color: #9d8665;
   font-family: Forum;
   flex: 0 1 auto;
 }
-.video .video__text {
+.video__flex .video__text {
   font-family: Roboto;
   font-weight: 300;
   font-size: 22px;
@@ -406,13 +407,17 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   height: 2900px;
+  width: 1440px;
+}
+.gallery .gallery__flex .gallery__flex-item {
+  margin-bottom: 12px;
 }
 .gallery .gallery__flex .gallery__flex-item6,
 .gallery .gallery__flex .gallery__flex-item7,
 .gallery .gallery__flex .gallery__flex-item8,
 .gallery .gallery__flex .gallery__flex-item9,
 .gallery .gallery__flex .gallery__flex-item10 {
-  margin: 0 36px 0 36px;
+  margin: 0 18px 12px 18px;
 }
 .gallery .gallery__flex .gallery__flex-item6 {
   margin-top: -50px;
@@ -420,4 +425,43 @@ body {
 
 .tickets {
   background-color: #ffffff;
+}
+.tickets .tickets__title {
+  color: #9d8665;
+  margin: 75px 0;
+  padding-bottom: 25px;
+  border-bottom: solid 3px #710707;
+}
+
+.flex-tickets {
+  display: flex;
+}
+.flex-tickets .image-tickets {
+  background: url(../../image/tickets/tickets.png) no-repeat center;
+  width: 720px;
+  height: 550px;
+}
+.flex-tickets .type-tickets {
+  margin-left: 60px;
+}
+.flex-tickets .type-tickets .type-tickets__title {
+  color: #030303;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  margin-bottom: 50px;
+}
+.flex-tickets .type-tickets p {
+  color: #030303;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0 0 25px 0;
+}
+.flex-tickets .type-tickets input {
+  margin-right: 23px;
+  border: 2px solid #000000;
+  color: red;
 }

@@ -20,25 +20,27 @@
     <title>Museum</title>
   </head>
   <body>
-    <!-- main -->
-    <!-- <div class="main">
+    <!-- welcome -->
+    <section class="welcome">
       <div class="countaner">
         <header class="header">
           <div class="logo">
             <div class="logo__image"></div>
-            <div class="logo__title">LOUVRE</div>
+            <h1 class="logo__title">LOUVRE</h1>
           </div>
-          <nav class="nav">
-            <div class="nav__item">Visiting</div>
-            <div class="nav__item">Explore</div>
-            <div class="nav__item">Video</div>
-            <div class="nav__item">Gallery</div>
-            <div class="nav__item">Tickets</div>
-            <div class="nav__item">Contacts</div>
+          <nav>
+            <ul class="nav">
+              <li class="nav__item">Visiting</li>
+              <li class="nav__item">Explore</li>
+              <li class="nav__item">Video</li>
+              <li class="nav__item">Gallery</li>
+              <li class="nav__item">Tickets</li>
+              <li class="nav__item">Contacts</li>
+            </ul>
           </nav>
         </header>
-        <div class="welcome">
-          <div class="welcome__title title">Welcome <br />to the Louvre</div>
+        <div class="welcome__count">
+          <h2 class="welcome__title title">Welcome <br />to the Louvre</h2>
           <div class="welcome__text">From the castle to the museum</div>
           <button class="welcome__button">
             <div class="welcome__button-text">Discover the Louvre</div>
@@ -57,22 +59,22 @@
             <div class="scrole__squares-square"></div>
           </div>
           <div class="scrole__arows">
-            <div class="scrole__arows-left"></div>
-            <div class="scrole__arows-right"></div>
+            <button class="scrole__arows-left"></button>
+            <button class="scrole__arows-right"></button>
           </div>
         </div>
       </div>
-    </div> -->
-    <!-- slider -->
-    <!-- <section class="slider">
+    </section>
+    <!-- Visiting  -->
+    <section class="visiting">
       <div class="countaner">
-        <div class="slider__title title">Virtual tour</div>
+        <h2 class="slider__title title">Virtual tour</h2>
         <div class="plases">
           <div class="plase">
             <div class="plase__img">
               <img src="image/slider/1.jpg" alt="Royal Palace" />
             </div>
-            <div class="plase__title title">Royal Palace</div>
+            <h3 class="plase__title title">Royal Palace</h3>
             <div class="plase__view">360° Virtual Tour</div>
             <div class="plase__text">Google Street Panorama View</div>
           </div>
@@ -80,7 +82,7 @@
             <div class="plase__img">
               <img src="image/slider/2.jpg" alt="Denon Wing" />
             </div>
-            <div class="plase__title title">Denon Wing</div>
+            <h3 class="plase__title title">Denon Wing</h3>
             <div class="plase__view">360° Virtual Tour</div>
             <div class="plase__text">Google Street Panorama View</div>
           </div>
@@ -88,7 +90,7 @@
             <div class="plase__img">
               <img src="image/slider/3.jpg" alt="Colonnade Perrault" />
             </div>
-            <div class="plase__title title">Colonnade Perrault</div>
+            <h3 class="plase__title title">Colonnade Perrault</h3>
             <div class="plase__view">360° Virtual Tour</div>
             <div class="plase__text">Google Street Panorama View</div>
           </div>
@@ -96,7 +98,7 @@
             <div class="plase__img">
               <img src="image/slider/4.jpg" alt="Greek hall" />
             </div>
-            <div class="plase__title title">Greek hall</div>
+            <h3 class="plase__title title">Greek hall</h3>
             <div class="plase__view">360° Virtual Tour</div>
             <div class="plase__text">Google Street Panorama View</div>
           </div>
@@ -104,7 +106,7 @@
             <div class="plase__img">
               <img src="image/slider/5.jpg" alt="Mona Lisa" />
             </div>
-            <div class="plase__title title">Mona Lisa</div>
+            <h3 class="plase__title title">Mona Lisa</h3>
             <div class="plase__view">360° Virtual Tour</div>
             <div class="plase__text">Google Street Panorama View</div>
           </div>
@@ -112,20 +114,20 @@
             <div class="plase__img">
               <img src="image/slider/6.jpg" alt="Night Palace" />
             </div>
-            <div class="plase__title title">Night Palace</div>
+            <h3 class="plase__title title">Night Palace</h3>
             <div class="plase__view">360° Virtual Tour</div>
             <div class="plase__text">Google Street Panorama View</div>
           </div>
         </div>
       </div>
-    </section> -->
-    <!-- info about picture -->
-    <!-- <section class="info">
+    </section>
+    <!-- Explore  -->
+    <section class="explore">
       <div class="countaner">
-        <div class="info__flex">
-          <div class="info__info">
-            <div class="info__title title">Picture explore</div>
-            <div class="info__text">
+        <div class="explore__flex">
+          <div class="explore__info">
+            <h2 class="explore__title title">Picture explore</h2>
+            <div class="explore__text">
               <p>
                 Las Meninas is a 1656 painting by Diego Velázquez, the leading
                 artist of the Spanish Golden Age.
@@ -141,17 +143,17 @@
               </p>
             </div>
           </div>
-          <div class="info__picture">
+          <div class="explore__picture">
             <img class="line" src="image/info/line.png" alt="line" />
           </div>
         </div>
       </div>
     </section>
-    <!-- video -->
-    <section>
+    <!-- Video -->
+    <section class="video">
       <div class="countaner">
-        <div class="video">
-          <div class="video__title title">Video journey</div>
+        <div class="video__flex">
+          <h2 class="video__title title">Video journey</h2>
           <div class="video__text">
             Enter and visit one of the most famous museums in the world and
             enjoy masterpieces such as Mona Lisa or Hammurabi's Code
@@ -195,24 +197,24 @@
           </div>
         </div>
         <div class="video__scrole">
-          <div class="video__scrole-left">
+          <button class="video__scrole-left">
             <img src="image/video/left.png" alt="left" />
-          </div>
+          </button>
           <div class="video__scrole-item video__scrole-item-activ"></div>
           <div class="video__scrole-item"></div>
           <div class="video__scrole-item"></div>
           <div class="video__scrole-item"></div>
           <div class="video__scrole-item"></div>
-          <div class="video__scrole-right">
+          <button class="video__scrole-right">
             <img src="image/video/right.png" alt="right" />
-          </div>
+          </button>
         </div>
       </div>
     </section>
     <!-- Gallery -->
     <section class="gallery">
       <div class="countaner">
-        <div class="gallery__title title">Art Gallery</div>
+        <h2 class="gallery__title title">Art Gallery</h2>
         <div class="gallery__flex">
           <div class="gallery__flex-item gallery__flex-item1">
             <img src="image/galery/1.jpg" alt="painting" />
@@ -264,7 +266,62 @@
     </section>
     <!-- Tickets -->
     <section class="tickets">
-      <div class="coutener"></div>
+      <div class="countaner">
+        <h2 class="tickets__title title">BUY TICKETS</h2>
+        <div class="flex-tickets">
+          <div class="image-tickets"></div>
+          <div class="type-tickets">
+            <div class="type-tickets__title">Ticket Type</div>
+            <div class="type-tickets__input">
+              <p>
+                <input
+                  type="radio"
+                  checked
+                  name="type"
+                  value="Permanent exhibition"
+                />
+                Permanent exhibition
+              </p>
+              <p>
+                <input
+                  type="radio"
+                  name="type"
+                  value="Temporary exhibition"
+                />Temporary exhibition
+              </p>
+              <p>
+                <input
+                  type="radio"
+                  name="type"
+                  value="Combined Admission"
+                />Combined Admission
+              </p>
+            </div>
+          </div>
+          <div class="amount-tickets">
+            <div class="amount-tickets__title"></div>
+            <div class="amount-tickets__text"></div>
+            <div class="amount-tickets__flex">
+              <div class="amount-tickets__input">
+                <button class="minus"></button>
+                <input type="number" name="basic" value="1" />
+                <button class="plus"></button>
+              </div>
+            </div>
+            <div class="amount-tickets__text"></div>
+            <div class="amount-tickets__flex">
+              <div class="amount-tickets__input">
+                <button class="minus"></button>
+                <input type="number" name="senior" value="1" />
+                <button class="plus"></button>
+              </div>
+            </div>
+            <div class="amount-total"></div>
+            <button class="amount-tickets__buy"></button>
+          </div>
+        </div>
+      </div>
+      <div class="fon-tickets"></div>
     </section>
   </body>
 </html>

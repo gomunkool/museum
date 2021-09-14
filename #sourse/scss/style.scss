@@ -86,10 +86,12 @@ body {
 }
 .countaner {
   max-width: 1440px;
+  // padding: 0 30px;
   margin: 0 auto;
   position: relative;
+  border: 1px wheat solid;
 }
-.main {
+.welcome {
   background-color: $color-black;
 }
 .header {
@@ -116,11 +118,12 @@ body {
       margin-left: 25px;
     }
   }
+
   .nav {
     display: flex;
-    flex: 0 1 775px;
     align-items: center;
     justify-content: space-between;
+    width: 775px;
     .nav__item {
       color: $color-wite;
       font-family: $roboto;
@@ -139,7 +142,7 @@ body {
   letter-spacing: 5px;
   text-transform: uppercase;
 }
-.welcome {
+.welcome__count {
   background: url(../../image/main/picture1.png) no-repeat right;
   padding: 182px 0 272px 0;
   .welcome__title {
@@ -244,7 +247,7 @@ body {
     }
   }
 }
-// slider
+// Visiting
 
 .slider__title {
   color: $color-gold;
@@ -292,18 +295,18 @@ body {
     line-height: 21px;
   }
 }
-// info about picture
-.info {
+// Explore
+.explore {
   background-color: $color-black;
-  .info__flex {
+  .explore__flex {
     display: flex;
     justify-content: space-between;
     padding: 75px 0;
   }
-  .info__info {
+  .explore__info {
     max-width: 660px;
   }
-  .info__title {
+  .explore__title {
     max-width: 660px;
     padding-bottom: 25px;
     margin-bottom: 75px;
@@ -313,7 +316,7 @@ body {
     letter-spacing: 5px;
     border-bottom: 3px #710707 solid;
   }
-  .info__text {
+  .explore__text {
     color: $color-wite;
     font-family: $roboto;
     font-weight: 300;
@@ -326,7 +329,7 @@ body {
       color: $color-gold;
     }
   }
-  .info__picture {
+  .explore__picture {
     background: url(../../image/info/Rectangle.png) no-repeat center;
     width: 720px;
     height: 700px;
@@ -339,8 +342,8 @@ body {
     }
   }
 }
-// video
-.video {
+// Video
+.video__flex {
   display: flex;
   justify-content: space-between;
   padding: 75px 0;
@@ -405,14 +408,16 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     height: 2900px;
+    width: 1440px;
     .gallery__flex-item {
+      margin-bottom: 12px;
     }
     .gallery__flex-item6,
     .gallery__flex-item7,
     .gallery__flex-item8,
     .gallery__flex-item9,
     .gallery__flex-item10 {
-      margin: 0 36px 0 36px;
+      margin: 0 18px 12px 18px;
     }
     .gallery__flex-item6 {
       margin-top: -50px;
@@ -422,4 +427,42 @@ body {
 // Tickets
 .tickets {
   background-color: $color-wite;
+  .tickets__title {
+    color: $color-gold;
+    margin: 75px 0;
+    padding-bottom: 25px;
+    border-bottom: solid 3px #710707;
+  }
+}
+.flex-tickets {
+  display: flex;
+  .image-tickets {
+    background: url(../../image/tickets/tickets.png) no-repeat center;
+    width: 720px;
+    height: 550px;
+  }
+  .type-tickets {
+    margin-left: 60px;
+    .type-tickets__title {
+      color: $color-black;
+      font-family: $roboto;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 33px;
+      margin-bottom: 50px;
+    }
+    p {
+      color: $color-black;
+      font-family: $roboto;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 26px;
+      margin: 0 0 25px 0;
+    }
+    input {
+      margin-right: 23px;
+      border: 2px solid #000000;
+      color: red;
+    }
+  }
 }
