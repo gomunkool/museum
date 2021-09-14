@@ -394,3 +394,30 @@ body {
 .video__scrole .video__scrole-item-activ {
   background-color: #333333;
 }
+
+.gallery {
+  background-color: #030303;
+}
+.gallery .gallery__title {
+  padding: 75px 0 125px 0;
+}
+.gallery .gallery__flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 2900px;
+}
+.gallery .gallery__flex .gallery__flex-item6,
+.gallery .gallery__flex .gallery__flex-item7,
+.gallery .gallery__flex .gallery__flex-item8,
+.gallery .gallery__flex .gallery__flex-item9,
+.gallery .gallery__flex .gallery__flex-item10 {
+  margin: 0 36px 0 36px;
+}
+.gallery .gallery__flex .gallery__flex-item6 {
+  margin-top: -50px;
+}
+
+.tickets {
+  background-color: #ffffff;
+}
