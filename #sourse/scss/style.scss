@@ -86,10 +86,26 @@ body {
 }
 .countaner {
   max-width: 1440px;
-  // padding: 0 30px;
   margin: 0 auto;
   position: relative;
-  border: 1px wheat solid;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  .logo__image {
+    display: block;
+    height: 26px;
+    width: 49px;
+    background: url(../../image/main/logo.png) no-repeat center;
+  }
+  .logo__title {
+    color: $color-wite;
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-left: 25px;
+  }
 }
 .welcome {
   background-color: $color-black;
@@ -99,25 +115,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  .logo {
-    display: flex;
-    align-items: center;
-    .logo__image {
-      display: block;
-      height: 26px;
-      width: 49px;
-      background: url(../../image/main/logo.png) no-repeat center;
-    }
-    .logo__title {
-      color: $color-wite;
-      font-size: 28px;
-      line-height: 31px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      margin-left: 25px;
-    }
-  }
 
   .nav {
     display: flex;
@@ -436,6 +433,7 @@ body {
 }
 .flex-tickets {
   display: flex;
+
   .image-tickets {
     background: url(../../image/tickets/tickets.png) no-repeat center;
     width: 720px;
@@ -443,6 +441,7 @@ body {
   }
   .type-tickets {
     margin-left: 60px;
+    flex: 1 1 auto;
     .type-tickets__title {
       color: $color-black;
       font-family: $roboto;
@@ -461,8 +460,156 @@ body {
     }
     input {
       margin-right: 23px;
-      border: 2px solid #000000;
-      color: red;
+    }
+  }
+  .amount-tickets {
+    text-align: right;
+    .amount-tickets__title {
+      color: $color-black;
+      font-family: $roboto;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 33px;
+      margin-bottom: 25px;
+    }
+    .input-sum {
+      width: 150px;
+      margin-left: auto;
+      .input-sum__text {
+        color: $color-black;
+        font-family: $roboto;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: left;
+        margin-bottom: 15px;
+      }
+      .input-sum__flex {
+        width: 150px;
+        height: 50px;
+        margin-bottom: 10px;
+        border: $color-black solid 3px;
+        display: flex;
+      }
+    }
+    .amount-total__flex {
+      display: flex;
+      font-family: $roboto;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 33px;
+      margin-top: 50px;
+      justify-content: flex-end;
+    }
+
+    .amount-tickets__button {
+      background-color: $color-black;
+      color: $color-wite;
+      font-family: $roboto;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 26px;
+      text-align: center;
+      letter-spacing: 2px;
+      width: 175px;
+      height: 50px;
+      margin-top: 60px;
+      border-radius: 2px;
+    }
+  }
+}
+.paralax {
+  margin: 75px auto;
+  background: url(../../image/tickets/parallax1.png) no-repeat center;
+  height: 400px;
+  width: 1920px;
+}
+// Contacts
+.contacts__title {
+  color: $color-gold;
+  padding-bottom: 25px;
+  border-bottom: #710707 solid 3px;
+}
+.contacts_flex {
+  margin: 75px 0;
+  display: flex;
+  justify-content: space-between;
+  .addres {
+    .addres__title {
+      max-width: 227px;
+      font-family: $roboto;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 33px;
+      color: $color-black;
+      margin-bottom: 50px;
+    }
+    p {
+      font-family: $roboto;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 26px;
+      color: $color-black;
+      margin-bottom: 25px;
+    }
+  }
+  .map {
+    background: url(../../image/contacts/map.png) center no-repeat;
+    width: 960px;
+    height: 620px;
+  }
+}
+
+// footer
+.footer {
+  background-color: $color-black;
+  padding: 84px 0 0 0;
+  .footer__flex {
+    display: flex;
+
+    .logo {
+      align-self: flex-start;
+    }
+    .footer-nav {
+      flex: 1 0 auto;
+
+      ul {
+        columns: 2;
+        li {
+          font-family: $roboto;
+          font-weight: 200;
+          font-size: 22px;
+          line-height: 26px;
+          letter-spacing: 2px;
+          color: $color-wite;
+          margin: 0 0 25px 145px;
+        }
+      }
+    }
+
+    .social {
+      text-align: end;
+      width: 700px;
+      align-self: flex-end;
+      margin-bottom: 25px;
+
+      ul {
+        li {
+          // display: inline-table;
+          display: inline-table;
+
+          a {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #666666;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 25px;
+          }
+        }
+      }
     }
   }
 }

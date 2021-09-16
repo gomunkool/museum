@@ -92,7 +92,25 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
-  border: 1px wheat solid;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo .logo__image {
+  display: block;
+  height: 26px;
+  width: 49px;
+  background: url(../../image/main/logo.png) no-repeat center;
+}
+.logo .logo__title {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 31px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-left: 25px;
 }
 
 .welcome {
@@ -104,24 +122,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.header .logo {
-  display: flex;
-  align-items: center;
-}
-.header .logo .logo__image {
-  display: block;
-  height: 26px;
-  width: 49px;
-  background: url(../../image/main/logo.png) no-repeat center;
-}
-.header .logo .logo__title {
-  color: #ffffff;
-  font-size: 28px;
-  line-height: 31px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  margin-left: 25px;
 }
 .header .nav {
   display: flex;
@@ -443,6 +443,7 @@ body {
 }
 .flex-tickets .type-tickets {
   margin-left: 60px;
+  flex: 1 1 auto;
 }
 .flex-tickets .type-tickets .type-tickets__title {
   color: #030303;
@@ -462,6 +463,144 @@ body {
 }
 .flex-tickets .type-tickets input {
   margin-right: 23px;
-  border: 2px solid #000000;
-  color: red;
+}
+.flex-tickets .amount-tickets {
+  text-align: right;
+}
+.flex-tickets .amount-tickets .amount-tickets__title {
+  color: #030303;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  margin-bottom: 25px;
+}
+.flex-tickets .amount-tickets .input-sum {
+  width: 150px;
+  margin-left: auto;
+}
+.flex-tickets .amount-tickets .input-sum .input-sum__text {
+  color: #030303;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.flex-tickets .amount-tickets .input-sum .input-sum__flex {
+  width: 150px;
+  height: 50px;
+  margin-bottom: 10px;
+  border: #030303 solid 3px;
+  display: flex;
+}
+.flex-tickets .amount-tickets .amount-total__flex {
+  display: flex;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  margin-top: 50px;
+  justify-content: flex-end;
+}
+.flex-tickets .amount-tickets .amount-tickets__button {
+  background-color: #030303;
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 2px;
+  width: 175px;
+  height: 50px;
+  margin-top: 60px;
+  border-radius: 2px;
+}
+
+.paralax {
+  margin: 75px auto;
+  background: url(../../image/tickets/parallax1.png) no-repeat center;
+  height: 400px;
+  width: 1920px;
+}
+
+.contacts__title {
+  color: #9d8665;
+  padding-bottom: 25px;
+  border-bottom: #710707 solid 3px;
+}
+
+.contacts_flex {
+  margin: 75px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.contacts_flex .addres .addres__title {
+  max-width: 227px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #030303;
+  margin-bottom: 50px;
+}
+.contacts_flex .addres p {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  color: #030303;
+  margin-bottom: 25px;
+}
+.contacts_flex .map {
+  background: url(../../image/contacts/map.png) center no-repeat;
+  width: 960px;
+  height: 620px;
+}
+
+.footer {
+  background-color: #030303;
+  padding: 84px 0 0 0;
+}
+.footer .footer__flex {
+  display: flex;
+}
+.footer .footer__flex .logo {
+  align-self: flex-start;
+}
+.footer .footer__flex .footer-nav {
+  flex: 1 0 auto;
+}
+.footer .footer__flex .footer-nav ul {
+  columns: 2;
+}
+.footer .footer__flex .footer-nav ul li {
+  font-family: Roboto;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin: 0 0 25px 145px;
+}
+.footer .footer__flex .social {
+  text-align: end;
+  width: 700px;
+  align-self: flex-end;
+  margin-bottom: 25px;
+}
+.footer .footer__flex .social ul li {
+  display: inline-table;
+}
+.footer .footer__flex .social ul li a {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #666666;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
 }
