@@ -30,12 +30,12 @@
           </div>
           <nav>
             <ul class="nav">
-              <li class="nav__item">Visiting</li>
-              <li class="nav__item">Explore</li>
-              <li class="nav__item">Video</li>
-              <li class="nav__item">Gallery</li>
-              <li class="nav__item">Tickets</li>
-              <li class="nav__item">Contacts</li>
+              <li class="nav__item"><a href="#">Visiting</a></li>
+              <li class="nav__item"><a href="#">Explore</a></li>
+              <li class="nav__item"><a href="#">Video</a></li>
+              <li class="nav__item"><a href="#">Gallery</a></li>
+              <li class="nav__item"><a href="#">Tickets</a></li>
+              <li class="nav__item"><a href="#">Contacts</a></li>
             </ul>
           </nav>
         </header>
@@ -160,12 +160,24 @@
           </div>
         </div>
         <div class="player">
-          <video
-            class="player__main"
-            controls
-            poster="image/video/Rectangle.png"
-            src="video/videoplayback.mp4"
-          ></video>
+          <div class="player__main-count">
+            <video
+              class="player__main"
+              poster="image/video/Rectangle.png"
+              src="video/videoplayback.mp4"
+            ></video>
+            <button class="player__main-play">
+              <img src="image/video/play-main.png" />
+            </button>
+            <div class="player__main-control__flex">
+              <button class="player__main-control-play"></button>
+              <input type="range" class="player__main-control-input-time" />
+              <button class="player__main-control-volume"></button>
+              <input type="range" class="player__main-control-input-volume" />
+              <button class="player__main-control-fullscreen"></button>
+            </div>
+          </div>
+
           <div class="player__flex">
             <div class="player__flex-item">
               <iframe
@@ -333,7 +345,7 @@
     <!-- Contacts -->
     <section class="contacts">
       <div class="countaner">
-        <div class="contacts__title title">Contacts</div>
+        <h2 class="contacts__title title">Contacts</h2>
         <div class="contacts_flex">
           <div class="addres">
             <div class="addres__title">Palais Royal Musee du Louvre</div>
@@ -355,48 +367,51 @@
           </div>
           <nav class="footer-nav">
             <ul>
-              <li>Visiting</li>
-              <li>Explore</li>
-              <li>Video</li>
-              <li>Gallery</li>
-              <li>Tickets</li>
-              <li>Contacts</li>
+              <li><a href="#">Visiting</a></li>
+              <li><a href="#">Explore</a></li>
+              <li><a href="#">Video</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Tickets</a></li>
+              <li><a href="#">Contacts</a></li>
             </ul>
           </nav>
           <nav class="social">
             <ul class="social__list">
               <li>
-                <a class="youtube"
+                <a class="youtube" href="#"
                   ><img src="image/footer/youtube.svg" alt="youtube"
                 /></a>
               </li>
               <li>
-                <a class="instagram"
+                <a class="instagram" href="#"
                   ><img src="image/footer/instagram.svg" alt="instagram"
                 /></a>
               </li>
               <li>
-                <a class="fasebook"
+                <a class="fasebook" href="#"
                   ><img src="image/footer/fasebook.svg" alt="fasebook"
                 /></a>
               </li>
               <li>
-                <a class="twiter"
+                <a class="twiter" href="#"
                   ><img src="image/footer/twiter.svg" alt="twiter"
                 /></a>
               </li>
               <li>
-                <a class="pinterest"
+                <a class="pinterest" href="#"
                   ><img src="image/footer/pinterest.svg" alt="pinterest"
                 /></a>
               </li>
             </ul>
           </nav>
         </div>
+      </div>
+      <div class="line"></div>
+      <div class="countaner">
         <div class="about-proekt">
-          <div class="year"></div>
-          <div class="school"></div>
-          <div class="mi"></div>
+          <div class="year">© 2021</div>
+          <div class="school">The Rolling Scopes School</div>
+          <div class="mi">Gomunkool</div>
         </div>
       </div>
     </footer>

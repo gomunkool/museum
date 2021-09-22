@@ -129,7 +129,7 @@ body {
   justify-content: space-between;
   width: 775px;
 }
-.header .nav .nav__item {
+.header .nav .nav__item a {
   color: #ffffff;
   font-family: Roboto;
   font-weight: 200;
@@ -364,9 +364,33 @@ body {
   max-width: 720px;
 }
 
-.player .player__main {
+.player .player__main-count {
+  position: relative;
+}
+.player .player__main-count .player__main {
   max-width: 1440px;
   max-height: 650px;
+}
+.player .player__main-count .player__main-play {
+  position: absolute;
+  left: 610px;
+  top: 250px;
+  background: none;
+  border: 8px #ffffff solid;
+  border-radius: 100%;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player .player__main-count .player__main-play img {
+  padding-left: 20px;
+}
+.player .player__main-count .player__main-control__flex {
+  width: 1440px;
+  height: 85px;
+  background-color: #030303;
 }
 .player .player__flex {
   padding: 40px 0;
@@ -577,13 +601,15 @@ body {
   columns: 2;
 }
 .footer .footer__flex .footer-nav ul li {
+  margin: 0 0 25px 145px;
+}
+.footer .footer__flex .footer-nav ul li a {
   font-family: Roboto;
   font-weight: 200;
   font-size: 22px;
   line-height: 26px;
   letter-spacing: 2px;
   color: #ffffff;
-  margin: 0 0 25px 145px;
 }
 .footer .footer__flex .social {
   text-align: end;
@@ -603,4 +629,21 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: 25px;
+}
+.footer .line {
+  background-color: #666666;
+  height: 3px;
+  margin: 25px 0 50px 0;
+}
+.footer .about-proekt {
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 52px;
 }
