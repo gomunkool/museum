@@ -374,7 +374,7 @@ body {
 .player .player__main-count .player__main-play {
   position: absolute;
   left: 610px;
-  top: 250px;
+  top: 210px;
   background: none;
   border: 8px #ffffff solid;
   border-radius: 100%;
@@ -388,9 +388,9 @@ body {
   padding-left: 20px;
 }
 .player .player__main-count .player__main-control__flex {
-  width: 1439px;
-  height: 85px;
-  margin-top: -2px;
+  width: 1440px;
+  height: 88px;
+  margin-top: -3px;
   background-color: #030303;
   display: flex;
   align-items: center;
@@ -400,6 +400,54 @@ body {
   width: 30px;
   margin-left: 30px;
   background: url(../../image/video/play.png) no-repeat center;
+}
+.player .player__main-count .player__main-control__flex .player__main-control-input-time {
+  width: 925px;
+  margin-left: 50px;
+}
+.player .player__main-count .player__main-control__flex .player__main-control-volume {
+  height: 30px;
+  width: 50px;
+  margin: 0 45px;
+  background-color: #030303;
+  display: flex;
+  align-items: center;
+}
+.player .player__main-count .player__main-control__flex .player__main-control-volume .player__main-control-volume__wave-smol {
+  margin-left: 3px;
+}
+.player .player__main-count .player__main-control__flex .player__main-control-volume .player__main-control-volume__wave-big {
+  margin-left: -4px;
+}
+.player .player__main-count .player__main-control__flex .player__main-control-input-volume {
+  width: 150px;
+}
+.player .player__main-count .player__main-control__flex .player__main-control-fullscreen {
+  width: 35px;
+  height: 35px;
+  background-color: #030303;
+  margin-left: 50px;
+  position: relative;
+}
+.player .player__main-count .player__main-control__flex .player__main-control-fullscreen .fullscreen__tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.player .player__main-count .player__main-control__flex .player__main-control-fullscreen .fullscreen__tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.player .player__main-count .player__main-control__flex .player__main-control-fullscreen .fullscreen__bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.player .player__main-count .player__main-control__flex .player__main-control-fullscreen .fullscreen__br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .player .player__flex {
   padding: 40px 0;

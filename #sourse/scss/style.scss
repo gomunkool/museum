@@ -373,7 +373,7 @@ body {
       }
       position: absolute;
       left: 610px;
-      top: 250px;
+      top: 210px;
       background: none;
       border: 8px $color-wite solid;
       border-radius: 100%;
@@ -384,9 +384,9 @@ body {
       align-items: center;
     }
     .player__main-control__flex {
-      width: 1439px;
-      height: 85px;
-      margin-top: -2px;
+      width: 1440px;
+      height: 88px;
+      margin-top: -3px;
       background-color: $color-black;
       display: flex;
       align-items: center;
@@ -397,10 +397,54 @@ body {
         background: url(../../image/video/play.png) no-repeat center;
       }
       .player__main-control-input-time {
+        width: 925px;
+        margin-left: 50px;
       }
       .player__main-control-volume {
+        height: 30px;
+        width: 50px;
+        margin: 0 45px;
+        background-color: $color-black;
+        display: flex;
+        align-items: center;
+        .player__main-control-volume__wave-smol {
+          margin-left: 3px;
+        }
+        .player__main-control-volume__wave-big {
+          margin-left: -4px;
+        }
+      }
+      .player__main-control-input-volume {
+        width: 150px;
       }
       .player__main-control-fullscreen {
+        width: 35px;
+        height: 35px;
+        background-color: $color-black;
+        margin-left: 50px;
+        position: relative;
+        .fullscreen__tl {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .fullscreen__tr {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        .fullscreen__bl {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+
+        .fullscreen__br {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
       }
     }
   }
