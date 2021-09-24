@@ -388,9 +388,18 @@ body {
   padding-left: 20px;
 }
 .player .player__main-count .player__main-control__flex {
-  width: 1440px;
+  width: 1439px;
   height: 85px;
+  margin-top: -2px;
   background-color: #030303;
+  display: flex;
+  align-items: center;
+}
+.player .player__main-count .player__main-control__flex .player__main-control-play {
+  height: 27px;
+  width: 30px;
+  margin-left: 30px;
+  background: url(../../image/video/play.png) no-repeat center;
 }
 .player .player__flex {
   padding: 40px 0;

@@ -384,9 +384,24 @@ body {
       align-items: center;
     }
     .player__main-control__flex {
-      width: 1440px;
+      width: 1439px;
       height: 85px;
+      margin-top: -2px;
       background-color: $color-black;
+      display: flex;
+      align-items: center;
+      .player__main-control-play {
+        height: 27px;
+        width: 30px;
+        margin-left: 30px;
+        background: url(../../image/video/play.png) no-repeat center;
+      }
+      .player__main-control-input-time {
+      }
+      .player__main-control-volume {
+      }
+      .player__main-control-fullscreen {
+      }
     }
   }
 
