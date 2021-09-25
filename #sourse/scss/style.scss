@@ -574,6 +574,29 @@ body {
         margin-bottom: 10px;
         border: $color-black solid 3px;
         display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .input-sum_input {
+          width: 35px;
+          font-family: $roboto;
+          font-weight: 300;
+          font-size: 22px;
+          line-height: 26px;
+          color: $color-black;
+          text-align: center;
+          padding-left: 10px;
+        }
+        .input-sum_button {
+          background-color: $color-wite;
+          font-family: $roboto;
+          font-size: 32px;
+          line-height: 37px;
+          text-align: center;
+          color: $color-black;
+        }
+        .input-sum_minus {
+          font-size: 54px;
+        }
       }
     }
     .amount-total__flex {
@@ -608,6 +631,82 @@ body {
   height: 400px;
   width: 1920px;
 }
+// Booking tickets
+.form-buy-columns {
+  padding: 91px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  .form-buy-columns__left {
+    max-width: 400px;
+    .form-buy__logo {
+      width: 85px;
+      height: 41px;
+      background: url(../../image/tickets-buy/logo.svg) no-repeat center;
+    }
+    .form-buy__title {
+      color: $color-gold;
+      font-family: $forum;
+      font-size: 50px;
+      line-height: 55px;
+      letter-spacing: 0px;
+    }
+    .form-buy__text {
+      font-family: $roboto;
+      font-size: 18px;
+      line-height: 21px;
+      color: #710707;
+      margin: 15px 0 60px 0;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #710707;
+    }
+    .form-buy-input {
+      display: flex;
+      align-items: center;
+      border: 1px solid #030303;
+      height: 45px;
+      margin-bottom: 20px;
+
+      .form-buy-input__logo {
+        margin: 0 15px;
+      }
+      .form-buy-input__title {
+        font-family: $roboto;
+        font-size: 18px;
+        line-height: 21px;
+        color: #030303;
+        flex: 1 1 auto;
+      }
+      .form-buy-input__arr {
+        margin: 0 14px;
+      }
+    }
+    .date-ant-time-contaner {
+      display: flex;
+      justify-content: space-between;
+      .form-buy-input__date {
+        width: 190px;
+        .form-buy-input__logo__date {
+          position: relative;
+          height: 15px;
+          width: 15px;
+          .form-buy-input__logo__date__top {
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+          .form-buy-input__logo__date__bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+      .form-buy-input__time {
+        width: 190px;
+      }
+    }
+  }
+}
 // Contacts
 .contacts__title {
   color: $color-gold;
@@ -635,6 +734,9 @@ body {
       line-height: 26px;
       color: $color-black;
       margin-bottom: 25px;
+      a {
+        color: $color-black;
+      }
     }
   }
   .map {
