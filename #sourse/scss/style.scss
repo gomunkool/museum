@@ -577,7 +577,7 @@ body {
         align-items: center;
         justify-content: space-around;
         .input-sum_input {
-          width: 35px;
+          width: 55px;
           font-family: $roboto;
           font-weight: 300;
           font-size: 22px;
@@ -632,10 +632,12 @@ body {
   width: 1920px;
 }
 // Booking tickets
+
 .form-buy-columns {
   padding: 91px 0 0 0;
   display: flex;
   justify-content: space-between;
+  max-width: 970px;
   .form-buy-columns__left {
     max-width: 400px;
     .form-buy__logo {
@@ -683,8 +685,10 @@ body {
     .date-ant-time-contaner {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       .form-buy-input__date {
         width: 190px;
+
         .form-buy-input__logo__date {
           position: relative;
           height: 15px;
@@ -707,6 +711,148 @@ body {
     }
   }
 }
+.form-buy-input__input {
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
+
+.form-buy__entry-ticket {
+  width: 400px;
+  height: 135px;
+  border: 1px solid $color-black;
+  padding: 10px 15px 15px 15px;
+  .form-buy__entry-ticket__title {
+    font-family: $forum;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: $color-gold;
+    padding: 0 0 5px 0;
+    border-bottom: 2px solid #740c11;
+    margin: 0 0 18px 0;
+  }
+  .form-buy__entry-ticket__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    .form-buy__entry-ticket__type {
+      font-family: $roboto;
+      font-size: 18px;
+      line-height: 21px;
+      color: $color-black;
+    }
+    .form-buy__entry-ticket__total {
+      font-family: $roboto;
+      font-size: 18px;
+      line-height: 21px;
+      color: $color-black;
+      flex: 1 1 auto;
+      margin: 0 0 0 5px;
+    }
+    .form-buy__entry-ticket__button {
+      background-color: $color-black;
+      color: $color-wite;
+      width: 35px;
+      height: 25px;
+      font-size: 20px;
+    }
+    .form-buy__entry-ticket__input {
+      border: 2px solid $color-black;
+      width: 45px;
+      height: 25px;
+      font-size: 20px;
+      font-family: $roboto;
+      text-align: center;
+      padding-left: 9px;
+    }
+  }
+}
+.form-buy-columns__right {
+  width: 530px;
+  height: 663px;
+  border: 1px solid #030303;
+  padding: 25px 30px 28px 30px;
+  position: relative;
+  .result-ticket__image {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 150px;
+    height: 120px;
+    background: url(../../image/tickets-buy/img.png) no-repeat center;
+  }
+  .result-ticket__text {
+    font-family: $roboto;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+    margin-bottom: 2px;
+    color: #272727;
+  }
+  .result-ticket__type {
+    font-family: $roboto;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #740c11;
+    opacity: 0.9;
+    margin-bottom: 10px;
+  }
+  .result-ticket__day {
+    display: flex;
+    margin-bottom: 5px;
+    .result-ticket__day-img {
+      position: relative;
+      height: 15px;
+      width: 15px;
+      .form-buy-input__logo__date__top {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .form-buy-input__logo__date__bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    .result-ticket__day-text {
+      padding: 0 0 0 15px;
+      font-family: $roboto;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 21px;
+      color: #030303;
+    }
+  }
+  .result-ticket__time {
+    display: flex;
+    margin-bottom: 5px;
+    .result-ticket__time-text {
+      padding: 0 0 0 15px;
+      font-family: $roboto;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 21px;
+      color: #030303;
+    }
+  }
+  .result-ticket__tick {
+    display: flex;
+    .result-ticket__tick-text {
+      padding: 0 0 0 15px;
+      font-family: $roboto;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 21px;
+      color: #030303;
+    }
+  }
+}
+
 // Contacts
 .contacts__title {
   color: $color-gold;

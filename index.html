@@ -30,12 +30,34 @@
           </div>
           <nav>
             <ul class="nav">
-              <li class="nav__item"><a href="#">Visiting</a></li>
-              <li class="nav__item"><a href="#">Explore</a></li>
-              <li class="nav__item"><a href="#">Video</a></li>
-              <li class="nav__item"><a href="#">Gallery</a></li>
-              <li class="nav__item"><a href="#">Tickets</a></li>
-              <li class="nav__item"><a href="#">Contacts</a></li>
+              <li class="nav__item">
+                <a data-goto=".visiting" class="nav__item-link" href="#"
+                  >Visiting</a
+                >
+              </li>
+              <li class="nav__item">
+                <a data-goto=".explore" class="nav__item-link" href="#"
+                  >Explore</a
+                >
+              </li>
+              <li class="nav__item">
+                <a data-goto=".video" class="nav__item-link" href="#">Video</a>
+              </li>
+              <li class="nav__item">
+                <a data-goto=".gallery" class="nav__item-link" href="#"
+                  >Gallery</a
+                >
+              </li>
+              <li class="nav__item">
+                <a data-goto=".tickets" class="nav__item-link" href="#"
+                  >Tickets</a
+                >
+              </li>
+              <li class="nav__item">
+                <a data-goto=".contacts" class="nav__item-link" href="#"
+                  >Contacts</a
+                >
+              </li>
             </ul>
           </nav>
         </header>
@@ -216,14 +238,13 @@
                 </button>
               </div>
             </div>
-
             <div class="player__flex">
               <div class="player__flex-item">
-                <iframe
+                <!-- <iframe
                   src="https://www.youtube.com/embed/aWmJ5DgyWPI"
                   title="YouTube video player"
                   frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
               </div>
@@ -232,7 +253,7 @@
                   src="https://www.youtube.com/embed/Vi5D6FKhRmo"
                   title="YouTube video player"
                   frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
               </div>
@@ -241,9 +262,9 @@
                   src="https://www.youtube.com/embed/NOhDysLnTvY"
                   title="YouTube video player"
                   frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
-                ></iframe>
+                ></iframe> -->
               </div>
             </div>
           </div>
@@ -354,7 +375,12 @@
               <div class="input-sum">
                 <div class="input-sum__text">Basic 18+</div>
                 <div class="input-sum__flex">
-                  <button class="input-sum_minus input-sum_button">-</button>
+                  <button
+                    class="input-sum_minus input-sum_button"
+                    onclick="this.nextElementSibling.stepDown()"
+                  >
+                    -
+                  </button>
                   <input
                     class="input-sum_input"
                     type="number"
@@ -364,7 +390,12 @@
                     max="20"
                     readonly
                   />
-                  <button class="input-sum_plus input-sum_button">+</button>
+                  <button
+                    class="input-sum_plus input-sum_button"
+                    onclick="this.previousElementSibling.stepUp()"
+                  >
+                    +
+                  </button>
                 </div>
               </div>
               <div class="input-sum">
@@ -425,7 +456,7 @@
                       alt="date"
                     />
                   </div>
-
+                  <input type="date" class="form-buy-input__input" />
                   <div class="form-buy-input__title">Date</div>
                   <div class="form-buy-input__arr">
                     <img src="image/tickets-buy/arrow.svg" alt="arrow" />
@@ -435,6 +466,7 @@
                   <div class="form-buy-input__logo">
                     <img src="image/tickets-buy/time.svg" alt="time" />
                   </div>
+                  <input type="time" class="form-buy-input__input" />
                   <div class="form-buy-input__title">Time</div>
                   <div class="form-buy-input__arr">
                     <img src="image/tickets-buy/arrow.svg" alt="arrow" />
@@ -443,37 +475,58 @@
               </div>
 
               <div class="form-buy-input form-buy-input__name">
-                <div class="form-buy-input__logo"></div>
-                <div class="form-buy-input__title"></div>
+                <div class="form-buy-input__logo">
+                  <img src="image/tickets-buy/name.svg" alt="name" />
+                </div>
+                <input type="text" class="form-buy-input__input" />
+
+                <div class="form-buy-input__title">Name</div>
               </div>
               <div class="form-buy-input form-buy-input__mail">
-                <div class="form-buy-input__logo"></div>
-                <div class="form-buy-input__title"></div>
+                <div class="form-buy-input__logo">
+                  <img src="image/tickets-buy/email.svg" alt="email" />
+                </div>
+                <input type="email" class="form-buy-input__input" />
+
+                <div class="form-buy-input__title">E-mail</div>
               </div>
               <div class="form-buy-input form-buy-input__phone">
-                <div class="form-buy-input__logo"></div>
-                <div class="form-buy-input__title"></div>
+                <div class="form-buy-input__logo">
+                  <img src="image/tickets-buy/tel.svg" alt="phone" />
+                </div>
+                <input type="text" class="form-buy-input__input" />
+
+                <div class="form-buy-input__title">Phone</div>
               </div>
               <div class="form-buy-input form-buy-input__type">
-                <div class="form-buy-input__logo"></div>
-                <div class="form-buy-input__title"></div>
-                <div class="form-buy-input__arr"></div>
+                <div class="form-buy-input__logo">
+                  <img src="image/tickets-buy/type.svg" alt="type" />
+                </div>
+                <input type="tel" class="form-buy-input__input" />
+
+                <div class="form-buy-input__title">Ticket Type</div>
+                <div class="form-buy-input__arr">
+                  <img src="image/tickets-buy/arrow.svg" alt="arrow" />
+                </div>
               </div>
               <div class="form-buy__entry-ticket">
-                <div class="form-buy__entry-ticket__title"></div>
+                <div class="form-buy__entry-ticket__title">Entry ticket</div>
                 <div class="form-buy__entry-ticket__flex">
-                  <div class="form-buy__entry-ticket__type"></div>
-                  <div class="form-buy__entry-ticket__total"></div>
+                  <div class="form-buy__entry-ticket__type">Basic 18+</div>
+                  <div class="form-buy__entry-ticket__total">(20 €)</div>
                   <button
                     class="
                       form-buy__entry-ticket__button
                       form-buy__entry-ticket__minus
                     "
-                  ></button>
+                    onclick="this.nextElementSibling.stepDown()"
+                  >
+                    -
+                  </button>
                   <input
                     class="form-buy__entry-ticket__input"
                     type="number"
-                    name="basic"
+                    name="name"
                     value="1"
                     min="0"
                     max="20"
@@ -484,11 +537,96 @@
                       form-buy__entry-ticket__button
                       form-buy__entry-ticket__plus
                     "
-                  ></button>
+                    onclick="this.previousElementSibling.stepUp()"
+                  >
+                    +
+                  </button>
+                </div>
+                <div class="form-buy__entry-ticket__flex">
+                  <div class="form-buy__entry-ticket__type">Senior 65+</div>
+                  <div class="form-buy__entry-ticket__total">(10 €)</div>
+                  <button
+                    class="
+                      form-buy__entry-ticket__button
+                      form-buy__entry-ticket__minus
+                    "
+                    onclick="this.nextElementSibling.stepDown()"
+                  >
+                    -
+                  </button>
+                  <input
+                    class="form-buy__entry-ticket__input"
+                    type="number"
+                    name="name"
+                    value="1"
+                    min="0"
+                    max="20"
+                    readonly
+                  />
+                  <button
+                    class="
+                      form-buy__entry-ticket__button
+                      form-buy__entry-ticket__plus
+                    "
+                    onclick="this.previousElementSibling.stepUp()"
+                  >
+                    +
+                  </button>
                 </div>
               </div>
             </div>
-            <div class="form-buy-columns__right"></div>
+            <div class="form-buy-columns__right">
+              <div class="result-ticket">
+                <div class="result-ticket__image"></div>
+                <div class="result-ticket__text">Overview</div>
+                <div class="result-ticket__type">Tour to Louvre</div>
+                <div class="result-ticket__day">
+                  <div class="result-ticket__day-img">
+                    <img
+                      class="form-buy-input__logo__date__top"
+                      src="image/tickets-buy/date.svg"
+                      alt="date"
+                    />
+                    <img
+                      class="form-buy-input__logo__date__bottom"
+                      src="image/tickets-buy/date1.svg"
+                      alt="date"
+                    />
+                  </div>
+                  <div class="result-ticket__day-text">Friday, August 19</div>
+                </div>
+                <div class="result-ticket__time">
+                  <div class="result-ticket__time-img">
+                    <img src="image/tickets-buy/time.svg" alt="time" />
+                  </div>
+                  <div class="result-ticket__time-text">16 : 30</div>
+                </div>
+                <div class="result-ticket__tick">
+                  <div class="result-ticket__tick-img">
+                    <img src="image/tickets-buy/tick.svg" alt="tick" />
+                  </div>
+                  <div class="result-ticket__tick-text">
+                    Temporary exhibition
+                  </div>
+                </div>
+                <div class="result-type">
+                  <div class="result-type__img"></div>
+                  <div class="result-type__type"></div>
+                  <div class="result-type__cost"></div>
+                  <div class="result-type__total"></div>
+                </div>
+                <div class="result-type">
+                  <div class="result-type__img"></div>
+                  <div class="result-type__type"></div>
+                  <div class="result-type__cost"></div>
+                  <div class="result-type__total"></div>
+                </div>
+                <div class="total-ticket">
+                  <div class="total-ticket__taxt"></div>
+                  <div class="total-ticket__total"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </form>
@@ -515,6 +653,7 @@
     </main>
 
     <!-- footer -->
+
     <footer class="footer">
       <div class="countaner">
         <div class="footer__flex">
@@ -524,12 +663,20 @@
           </div>
           <nav class="footer-nav">
             <ul>
-              <li><a href="#">Visiting</a></li>
-              <li><a href="#">Explore</a></li>
-              <li><a href="#">Video</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">Tickets</a></li>
-              <li><a href="#">Contacts</a></li>
+              <li>
+                <a data-goto=".visiting" class="nav__item-link" href=""
+                  >Visiting</a
+                >
+              </li>
+              <li>
+                <a data-goto=".explore" class="nav__item-link" href=""
+                  >Explore</a
+                >
+              </li>
+              <li><a href="">Video</a></li>
+              <li><a href="">Gallery</a></li>
+              <li><a href="">Tickets</a></li>
+              <li><a href="">Contacts</a></li>
             </ul>
           </nav>
           <nav class="social">
@@ -573,4 +720,5 @@
       </div>
     </footer>
   </body>
+  <script src="script/main.js"></script>
 </html>
