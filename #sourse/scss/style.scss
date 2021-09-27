@@ -129,6 +129,12 @@ body {
       line-height: 26px;
       letter-spacing: 2px;
     }
+    .nav__item-link:hover {
+      color: #9d8665;
+    }
+    .nav__item-link:active {
+      color: #7e6c51;
+    }
   }
 }
 .title {
@@ -165,14 +171,15 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
-  }
-  .welcome__button-text {
     color: $color-wite;
     font-family: $roboto;
     font-weight: 300;
     font-size: 22px;
     line-height: 26px;
     letter-spacing: 2px;
+  }
+  .welcome__button:hover {
+    background-color: #9d8665;
   }
 }
 .scrole {
@@ -235,6 +242,7 @@ body {
       height: 8px;
       margin: 0 10px 0 0;
     }
+
     .scrole__arows-right {
       background: url(../../image/main/right.png) no-repeat center;
       display: block;
@@ -396,6 +404,9 @@ body {
         margin-left: 30px;
         background: url(../../image/video/play.png) no-repeat center;
       }
+      .player__main-control-play:hover {
+        opacity: 0.6;
+      }
       .player__main-control-input-time {
         width: 925px;
         margin-left: 50px;
@@ -446,6 +457,12 @@ body {
           right: 0;
         }
       }
+      .player__main-control-fullscreen:hover {
+        opacity: 0.6;
+      }
+    }
+    .player__main-control-volume:hover {
+      opacity: 0.6;
     }
   }
 
@@ -481,6 +498,25 @@ body {
 // Gallery
 .gallery {
   background-color: $color-black;
+  position: relative;
+
+  .curtain {
+    position: absolute;
+    top: 1840px;
+    left: 0;
+    height: 360px;
+    width: 1440px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  }
+  .curtain__wite {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1000px;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+  }
   .gallery__title {
     padding: 75px 0 125px 0;
   }
@@ -507,7 +543,10 @@ body {
 }
 // Tickets
 .tickets {
+  position: relative;
+  z-index: 20;
   background-color: $color-wite;
+  margin-top: -1000px;
   .tickets__title {
     color: $color-gold;
     margin: 75px 0;
@@ -623,6 +662,10 @@ body {
       margin-top: 60px;
       border-radius: 2px;
     }
+    .amount-tickets__button:hover {
+      background-color: #9d8665;
+      color: #000000;
+    }
   }
 }
 .paralax {
@@ -633,11 +676,41 @@ body {
 }
 // Booking tickets
 
+.form-buy {
+  position: relative;
+  width: 2300px;
+  height: 1800px;
+  padding: 260px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 1s;
+  transform: translateX(-100%);
+  z-index: 30;
+  .form-buy__close {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .form-buy__close-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
 .form-buy-columns {
-  padding: 91px 0 0 0;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   max-width: 970px;
+  margin: 0 auto;
+  background-color: $color-wite;
   .form-buy-columns__left {
     max-width: 400px;
     .form-buy__logo {
@@ -849,10 +922,231 @@ body {
       font-size: 18px;
       line-height: 21px;
       color: #030303;
+      margin: 0 0 25px 0;
+    }
+  }
+  .result-type {
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px 0;
+    .result-type__img {
+      font-family: $roboto;
+      font-size: 18px;
+      line-height: 21px;
+      color: #a4a4a3;
+      width: 32px;
+      height: 20px;
+      background-color: $color-black;
+      border-radius: 20%;
+      text-align: center;
+      margin: 0 10px 0 0;
+    }
+    .result-type__type {
+      font-family: $roboto;
+      font-size: 22px;
+      line-height: 26px;
+      color: #030303;
+    }
+    .result-type__cost {
+      font-family: $roboto;
+      font-size: 22px;
+      line-height: 26px;
+      color: #030303;
+      margin: 0 0 0 5px;
+      flex: 1 1 auto;
+    }
+    .result-type__total {
+      font-family: $roboto;
+      font-size: 22px;
+      line-height: 26px;
+      color: #030303;
+    }
+  }
+  .total-ticket {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $roboto;
+    font-size: 32px;
+    line-height: 37px;
+    color: #030303;
+    margin: 9px 0 10px 0;
+    padding: 10px 0 0 0;
+    border-top: 2px solid #740c11;
+  }
+}
+.card {
+  width: 470px;
+  height: 241px;
+  position: relative;
+  .card-back {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 360px;
+    height: 211px;
+    background-color: #939393;
+    border-radius: 2%;
+    .card-back__midle-line {
+      background-color: #161615;
+      margin: 25px 0 0 0;
+      height: 45px;
+      width: 100%;
+    }
+    .card-back__cvv {
+      font-family: $roboto;
+      font-size: 12px;
+      line-height: 14px;
+      color: #161615;
+      padding: 15px 0 0 274px;
+    }
+    .card-back__input {
+      height: 35px;
+      width: 75px;
+      margin: 5px 0 6px 265px;
+      font-family: $roboto;
+      font-size: 15px;
+    }
+    .card-back__info {
+      font-family: Roboto;
+      font-size: 10px;
+      line-height: 12px;
+      color: #161615;
+      height: 50px;
+      width: 55px;
+      text-align: left;
+      margin: 0 0 0 275px;
+      z-index: 1;
+    }
+  }
+  .card-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 211px;
+    background-color: #bcbcbc;
+    border-radius: 2%;
+    z-index: 2;
+    padding: 15px 20px;
+
+    .card-front__title {
+      font-family: $roboto;
+      font-size: 12px;
+      line-height: 14px;
+      color: #161615;
+    }
+    .card-front__input {
+      height: 35px;
+      margin: 5px 0 10px 0;
+      font-family: $roboto;
+      font-size: 14px;
+      color: #161615;
+    }
+    .card-front__input-number {
+      width: 215px;
+    }
+  }
+  .card-front__inputs-count {
+    display: flex;
+    justify-content: space-between;
+    width: 215px;
+  }
+  .card-front__label {
+    display: flex;
+    height: 35px;
+    width: 100px;
+    margin: 5px 0 10px 0;
+    .card-front__number {
+      font-family: $roboto;
+      font-size: 14px;
+      color: #161615;
+      padding: 0 0 0 10px;
+      width: 72px;
+    }
+    .card-front__arrows {
+      background-color: $color-wite;
+      border-left: #bcbcbc solid 1px;
+      width: 28px;
+      position: relative;
+      .card-front__arrow-top {
+        position: absolute;
+        top: 12px;
+        left: 11px;
+      }
+      .card-front__arrow-bottom {
+        position: absolute;
+        bottom: 12px;
+        left: 11px;
+      }
+    }
+  }
+  .card-front__input-name {
+    width: 320px;
+  }
+  .card-front__logo {
+    position: absolute;
+    top: 34px;
+    right: 20px;
+    height: 63px;
+    width: 53px;
+    .visa {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .visa1 {
+      position: absolute;
+      top: 0;
+      left: 19px;
+    }
+    .visa2 {
+      position: absolute;
+      top: 0;
+      left: 4.44px;
+    }
+    .visa3 {
+      position: absolute;
+      top: 0;
+      left: 25px;
+    }
+    .visa4 {
+      position: absolute;
+      top: 0;
+      left: 36px;
+    }
+    .mastercard1 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .mastercard {
+      position: absolute;
+      bottom: 0;
+      left: 21px;
+    }
+    .mastercard2 {
+      position: absolute;
+      bottom: 11px;
+      left: 0;
     }
   }
 }
-
+.btn-book {
+  height: 45px;
+  width: 220px;
+  background-color: #710707;
+  font-family: $roboto;
+  font-size: 22px;
+  color: #ffffff;
+  margin: 26px 0 0 250px;
+}
+.btn-book:hover {
+  background: #9d8665;
+}
+.form-buy__active {
+  transform: translateX(0%);
+}
 // Contacts
 .contacts__title {
   color: $color-gold;
@@ -891,7 +1185,9 @@ body {
     height: 620px;
   }
 }
-
+.form-buy__activ {
+  transform: translateX(0%);
+}
 // footer
 .footer {
   background-color: $color-black;
@@ -916,8 +1212,13 @@ body {
             letter-spacing: 2px;
             color: $color-wite;
           }
-
           margin: 0 0 25px 145px;
+        }
+        .nav__item-link:hover {
+          color: #9d8665;
+        }
+        .nav__item-link:active {
+          color: #7e6c51;
         }
       }
     }
@@ -942,6 +1243,9 @@ body {
             align-items: center;
             margin-left: 25px;
           }
+        }
+        a:hover {
+          border: 3px solid #710707;
         }
       }
     }

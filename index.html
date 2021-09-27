@@ -64,9 +64,7 @@
         <div class="welcome__count">
           <h2 class="welcome__title title">Welcome <br />to the Louvre</h2>
           <div class="welcome__text">From the castle to the museum</div>
-          <button class="welcome__button">
-            <div class="welcome__button-text">Discover the Louvre</div>
-          </button>
+          <button class="welcome__button">Discover the Louvre</button>
         </div>
         <div class="scrole">
           <div class="scrole__numbers">
@@ -240,7 +238,7 @@
             </div>
             <div class="player__flex">
               <div class="player__flex-item">
-                <!-- <iframe
+                <iframe
                   src="https://www.youtube.com/embed/aWmJ5DgyWPI"
                   title="YouTube video player"
                   frameborder="0"
@@ -264,7 +262,7 @@
                   frameborder="0"
                   allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
-                ></iframe> -->
+                ></iframe>
               </div>
             </div>
           </div>
@@ -285,7 +283,10 @@
       </section>
       <!-- Gallery -->
       <section class="gallery">
+        <div class="curtain__wite"></div>
+
         <div class="countaner">
+          <div class="curtain"></div>
           <h2 class="gallery__title title">Art Gallery</h2>
           <div class="gallery__flex">
             <div class="gallery__flex-item gallery__flex-item1">
@@ -436,6 +437,18 @@
       </section>
       <!-- Booking tickets -->
       <form class="form-buy">
+        <button class="form-buy__close">
+          <img
+            class="form-buy__close-line"
+            src="image/tickets-buy/line.svg"
+            alt="close"
+          />
+          <img
+            class="form-buy__close-line"
+            src="image/tickets-buy/line-1.svg"
+            alt="close"
+          />
+        </button>
         <div class="countaner">
           <div class="form-buy-columns">
             <div class="form-buy-columns__left">
@@ -610,22 +623,141 @@
                   </div>
                 </div>
                 <div class="result-type">
-                  <div class="result-type__img"></div>
-                  <div class="result-type__type"></div>
-                  <div class="result-type__cost"></div>
-                  <div class="result-type__total"></div>
+                  <div class="result-type__img">2</div>
+                  <div class="result-type__type">Basic</div>
+                  <div class="result-type__cost">(20 €)</div>
+                  <div class="result-type__total">40 €</div>
                 </div>
                 <div class="result-type">
-                  <div class="result-type__img"></div>
-                  <div class="result-type__type"></div>
-                  <div class="result-type__cost"></div>
-                  <div class="result-type__total"></div>
+                  <div class="result-type__img">2</div>
+                  <div class="result-type__type">Senior</div>
+                  <div class="result-type__cost">(10 €)</div>
+                  <div class="result-type__total">20 €</div>
                 </div>
                 <div class="total-ticket">
-                  <div class="total-ticket__taxt"></div>
-                  <div class="total-ticket__total"></div>
+                  <div class="total-ticket__taxt">Total:</div>
+                  <div class="total-ticket__total">60 €</div>
                 </div>
               </div>
+
+              <div class="card">
+                <div class="card-back">
+                  <div class="card-back__midle-line"></div>
+                  <div class="card-back__cvv">CVC/CVV</div>
+                  <input type="text" class="card-back__input" />
+                  <div class="card-back__info">
+                    The last 3 or 4 digits on back of the card
+                  </div>
+                </div>
+                <div class="card-front">
+                  <div class="card-front__logo">
+                    <img
+                      class="visa"
+                      src="image/tickets-buy/logo/visa.svg"
+                      alt="card"
+                    />
+                    <img
+                      class="visa1"
+                      src="image/tickets-buy/logo/visa-1.svg"
+                      alt="card"
+                    />
+                    <img
+                      class="visa2"
+                      src="image/tickets-buy/logo/visa-2.svg"
+                      alt="card"
+                    />
+                    <img
+                      class="visa3"
+                      src="image/tickets-buy/logo/visa-3.svg"
+                      alt="card"
+                    />
+                    <img
+                      class="visa4"
+                      src="image/tickets-buy/logo/visa-4.svg"
+                      alt="card"
+                    />
+                    <img
+                      class="mastercard"
+                      src="image/tickets-buy/logo/mastercard.svg"
+                      alt="card"
+                    />
+                    <img
+                      class="mastercard1"
+                      src="image/tickets-buy/logo/mastercard-1.svg"
+                      alt="card"
+                    />
+                    <img
+                      class="mastercard2"
+                      src="image/tickets-buy/logo/mastercard-2.svg"
+                      alt="card"
+                    />
+                  </div>
+                  <div class="card-front__inpyt-text">
+                    <div class="card-front__title">Card number</div>
+                    <input
+                      type="text"
+                      class="card-front__input card-front__input-number"
+                    />
+                  </div>
+                  <div class="card-front__title">Expiration date</div>
+                  <div class="card-front__inputs-count">
+                    <label class="card-front__label" for="q">
+                      <input
+                        class="card-front__number"
+                        type="number"
+                        name="name"
+                        value="03"
+                        min="01"
+                        max="12"
+                        readonly
+                      />
+                      <div class="card-front__arrows">
+                        <img
+                          class="card-front__arrow-top"
+                          src="image/tickets-buy/arrow-top.svg"
+                          alt="arrow"
+                        />
+                        <img
+                          class="card-front__arrow-bottom"
+                          src="image/tickets-buy/arrow-bottom.svg"
+                          alt="arrow"
+                        />
+                      </div>
+                    </label>
+                    <label class="card-front__label" for="q">
+                      <input
+                        class="card-front__number"
+                        type="number"
+                        name="name"
+                        value="2024"
+                        min="2021"
+                        max="2032"
+                        readonly
+                      />
+                      <div class="card-front__arrows">
+                        <img
+                          class="card-front__arrow-top"
+                          src="image/tickets-buy/arrow-top.svg"
+                          alt="arrow"
+                        />
+                        <img
+                          class="card-front__arrow-bottom"
+                          src="image/tickets-buy/arrow-bottom.svg"
+                          alt="arrow"
+                        />
+                      </div>
+                    </label>
+                  </div>
+                  <div class="card-front__inpyt-text">
+                    <div class="card-front__title">Cardholder name</div>
+                    <input
+                      type="text"
+                      class="card-front__input card-front__input-name"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button class="btn-book">Book</button>
             </div>
           </div>
         </div>
@@ -673,10 +805,24 @@
                   >Explore</a
                 >
               </li>
-              <li><a href="">Video</a></li>
-              <li><a href="">Gallery</a></li>
-              <li><a href="">Tickets</a></li>
-              <li><a href="">Contacts</a></li>
+              <li>
+                <a data-goto=".video" class="nav__item-link" href="">Video</a>
+              </li>
+              <li>
+                <a data-goto=".galery" class="nav__item-link" href=""
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a data-goto=".tickets" class="nav__item-link" href=""
+                  >Tickets</a
+                >
+              </li>
+              <li>
+                <a data-goto=".contacts" class="nav__item-link" href=""
+                  >Contacts</a
+                >
+              </li>
             </ul>
           </nav>
           <nav class="social">
@@ -719,6 +865,6 @@
         </div>
       </div>
     </footer>
+    <script src="script/main.js"></script>
   </body>
-  <script src="script/main.js"></script>
 </html>

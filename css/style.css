@@ -137,6 +137,12 @@ body {
   line-height: 26px;
   letter-spacing: 2px;
 }
+.header .nav .nav__item-link:hover {
+  color: #9d8665;
+}
+.header .nav .nav__item-link:active {
+  color: #7e6c51;
+}
 
 .title {
   color: #ffffff;
@@ -173,14 +179,15 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
-}
-.welcome__count .welcome__button-text {
   color: #ffffff;
   font-family: Roboto;
   font-weight: 300;
   font-size: 22px;
   line-height: 26px;
   letter-spacing: 2px;
+}
+.welcome__count .welcome__button:hover {
+  background-color: #9d8665;
 }
 
 .scrole {
@@ -401,6 +408,9 @@ body {
   margin-left: 30px;
   background: url(../../image/video/play.png) no-repeat center;
 }
+.player .player__main-count .player__main-control__flex .player__main-control-play:hover {
+  opacity: 0.6;
+}
 .player .player__main-count .player__main-control__flex .player__main-control-input-time {
   width: 925px;
   margin-left: 50px;
@@ -449,6 +459,12 @@ body {
   bottom: 0;
   right: 0;
 }
+.player .player__main-count .player__main-control__flex .player__main-control-fullscreen:hover {
+  opacity: 0.6;
+}
+.player .player__main-count .player__main-control-volume:hover {
+  opacity: 0.6;
+}
 .player .player__flex {
   padding: 40px 0;
   display: flex;
@@ -479,6 +495,24 @@ body {
 
 .gallery {
   background-color: #030303;
+  position: relative;
+}
+.gallery .curtain {
+  position: absolute;
+  top: 1840px;
+  left: 0;
+  height: 360px;
+  width: 1440px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+.gallery .curtain__wite {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1000px;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
 }
 .gallery .gallery__title {
   padding: 75px 0 125px 0;
@@ -505,7 +539,10 @@ body {
 }
 
 .tickets {
+  position: relative;
+  z-index: 20;
   background-color: #ffffff;
+  margin-top: -1000px;
 }
 .tickets .tickets__title {
   color: #9d8665;
@@ -622,6 +659,10 @@ body {
   margin-top: 60px;
   border-radius: 2px;
 }
+.flex-tickets .amount-tickets .amount-tickets__button:hover {
+  background-color: #9d8665;
+  color: #000000;
+}
 
 .paralax {
   margin: 75px auto;
@@ -630,11 +671,42 @@ body {
   width: 1920px;
 }
 
+.form-buy {
+  position: relative;
+  width: 2300px;
+  height: 1800px;
+  padding: 260px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 1s;
+  transform: translateX(-100%);
+  z-index: 30;
+}
+.form-buy .form-buy__close {
+  position: absolute;
+  top: 50px;
+  right: 60px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.form-buy .form-buy__close-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .form-buy-columns {
-  padding: 91px 0 0 0;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   max-width: 970px;
+  margin: 0 auto;
+  background-color: #ffffff;
 }
 .form-buy-columns .form-buy-columns__left {
   max-width: 400px;
@@ -847,6 +919,231 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #030303;
+  margin: 0 0 25px 0;
+}
+.form-buy-columns__right .result-type {
+  display: flex;
+  align-items: center;
+  margin: 0 0 5px 0;
+}
+.form-buy-columns__right .result-type .result-type__img {
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 21px;
+  color: #a4a4a3;
+  width: 32px;
+  height: 20px;
+  background-color: #030303;
+  border-radius: 20%;
+  text-align: center;
+  margin: 0 10px 0 0;
+}
+.form-buy-columns__right .result-type .result-type__type {
+  font-family: Roboto;
+  font-size: 22px;
+  line-height: 26px;
+  color: #030303;
+}
+.form-buy-columns__right .result-type .result-type__cost {
+  font-family: Roboto;
+  font-size: 22px;
+  line-height: 26px;
+  color: #030303;
+  margin: 0 0 0 5px;
+  flex: 1 1 auto;
+}
+.form-buy-columns__right .result-type .result-type__total {
+  font-family: Roboto;
+  font-size: 22px;
+  line-height: 26px;
+  color: #030303;
+}
+.form-buy-columns__right .total-ticket {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Roboto;
+  font-size: 32px;
+  line-height: 37px;
+  color: #030303;
+  margin: 9px 0 10px 0;
+  padding: 10px 0 0 0;
+  border-top: 2px solid #740c11;
+}
+
+.card {
+  width: 470px;
+  height: 241px;
+  position: relative;
+}
+.card .card-back {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 360px;
+  height: 211px;
+  background-color: #939393;
+  border-radius: 2%;
+}
+.card .card-back .card-back__midle-line {
+  background-color: #161615;
+  margin: 25px 0 0 0;
+  height: 45px;
+  width: 100%;
+}
+.card .card-back .card-back__cvv {
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+  padding: 15px 0 0 274px;
+}
+.card .card-back .card-back__input {
+  height: 35px;
+  width: 75px;
+  margin: 5px 0 6px 265px;
+  font-family: Roboto;
+  font-size: 15px;
+}
+.card .card-back .card-back__info {
+  font-family: Roboto;
+  font-size: 10px;
+  line-height: 12px;
+  color: #161615;
+  height: 50px;
+  width: 55px;
+  text-align: left;
+  margin: 0 0 0 275px;
+  z-index: 1;
+}
+.card .card-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 211px;
+  background-color: #bcbcbc;
+  border-radius: 2%;
+  z-index: 2;
+  padding: 15px 20px;
+}
+.card .card-front .card-front__title {
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+.card .card-front .card-front__input {
+  height: 35px;
+  margin: 5px 0 10px 0;
+  font-family: Roboto;
+  font-size: 14px;
+  color: #161615;
+}
+.card .card-front .card-front__input-number {
+  width: 215px;
+}
+.card .card-front__inputs-count {
+  display: flex;
+  justify-content: space-between;
+  width: 215px;
+}
+.card .card-front__label {
+  display: flex;
+  height: 35px;
+  width: 100px;
+  margin: 5px 0 10px 0;
+}
+.card .card-front__label .card-front__number {
+  font-family: Roboto;
+  font-size: 14px;
+  color: #161615;
+  padding: 0 0 0 10px;
+  width: 72px;
+}
+.card .card-front__label .card-front__arrows {
+  background-color: #ffffff;
+  border-left: #bcbcbc solid 1px;
+  width: 28px;
+  position: relative;
+}
+.card .card-front__label .card-front__arrows .card-front__arrow-top {
+  position: absolute;
+  top: 12px;
+  left: 11px;
+}
+.card .card-front__label .card-front__arrows .card-front__arrow-bottom {
+  position: absolute;
+  bottom: 12px;
+  left: 11px;
+}
+.card .card-front__input-name {
+  width: 320px;
+}
+.card .card-front__logo {
+  position: absolute;
+  top: 34px;
+  right: 20px;
+  height: 63px;
+  width: 53px;
+}
+.card .card-front__logo .visa {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card .card-front__logo .visa1 {
+  position: absolute;
+  top: 0;
+  left: 19px;
+}
+.card .card-front__logo .visa2 {
+  position: absolute;
+  top: 0;
+  left: 4.44px;
+}
+.card .card-front__logo .visa3 {
+  position: absolute;
+  top: 0;
+  left: 25px;
+}
+.card .card-front__logo .visa4 {
+  position: absolute;
+  top: 0;
+  left: 36px;
+}
+.card .card-front__logo .mastercard1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.card .card-front__logo .mastercard {
+  position: absolute;
+  bottom: 0;
+  left: 21px;
+}
+.card .card-front__logo .mastercard2 {
+  position: absolute;
+  bottom: 11px;
+  left: 0;
+}
+
+.btn-book {
+  height: 45px;
+  width: 220px;
+  background-color: #710707;
+  font-family: Roboto;
+  font-size: 22px;
+  color: #ffffff;
+  margin: 26px 0 0 250px;
+}
+
+.btn-book:hover {
+  background: #9d8665;
+}
+
+.form-buy__active {
+  transform: translateX(0%);
 }
 
 .contacts__title {
@@ -886,6 +1183,10 @@ body {
   height: 620px;
 }
 
+.form-buy__activ {
+  transform: translateX(0%);
+}
+
 .footer {
   background-color: #030303;
   padding: 84px 0 0 0;
@@ -913,6 +1214,12 @@ body {
   letter-spacing: 2px;
   color: #ffffff;
 }
+.footer .footer__flex .footer-nav ul .nav__item-link:hover {
+  color: #9d8665;
+}
+.footer .footer__flex .footer-nav ul .nav__item-link:active {
+  color: #7e6c51;
+}
 .footer .footer__flex .social {
   text-align: end;
   width: 700px;
@@ -931,6 +1238,9 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: 25px;
+}
+.footer .footer__flex .social ul a:hover {
+  border: 3px solid #710707;
 }
 .footer .line {
   background-color: #666666;

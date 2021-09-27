@@ -19,3 +19,19 @@ function onMenuLinkClick(e) {
     })
   }
 }
+
+//выдвижение формы покупки билетов
+
+const btnOpenPanelBuyTicket = document.querySelector('.amount-tickets__button') //кнопка покупки билетов
+const buyPanel = document.querySelector('.form-buy')
+const btnClosePanelBuyTicket = document.querySelector('.form-buy__close')
+
+btnOpenPanelBuyTicket.addEventListener('click', () => {
+  //открытие формы покупки билетов
+  buyPanel.classList.add('form-buy__active')
+})
+
+btnClosePanelBuyTicket.addEventListener('click', () => {
+  //закрытие формы покупки билетов
+  buyPanel.classList.remove('form-buy__active')
+})
