@@ -102,7 +102,7 @@ body {
   display: block;
   height: 26px;
   width: 49px;
-  background: url(../../image/main/logo.png) no-repeat center;
+  background: url(../image/main/logo.png) no-repeat center;
 }
 .logo .logo__title {
   color: #ffffff;
@@ -154,7 +154,7 @@ body {
 }
 
 .welcome__count {
-  background: url(../../image/main/picture1.png) no-repeat right;
+  background: url(../image/main/picture1.png) no-repeat right;
   padding: 182px 0 272px 0;
 }
 .welcome__count .welcome__title {
@@ -244,14 +244,14 @@ body {
   height: 10px;
 }
 .scrole .scrole__arows .scrole__arows-left {
-  background: url(../../image/main/left.png) no-repeat center;
+  background: url(../image/main/left.png) no-repeat center;
   display: block;
   width: 30px;
   height: 8px;
   margin: 0 10px 0 0;
 }
 .scrole .scrole__arows .scrole__arows-right {
-  background: url(../../image/main/right.png) no-repeat center;
+  background: url(../image/main/right.png) no-repeat center;
   display: block;
   width: 30px;
   height: 8px;
@@ -339,7 +339,7 @@ body {
   color: #9d8665;
 }
 .explore .explore__picture {
-  background: url(../../image/info/Rectangle.png) no-repeat center;
+  background: url(../image/info/Rectangle.png) no-repeat center;
   width: 720px;
   height: 700px;
   margin-top: 15px;
@@ -406,7 +406,7 @@ body {
   height: 27px;
   width: 30px;
   margin-left: 30px;
-  background: url(../../image/video/play.png) no-repeat center;
+  background: url(../image/video/play.png) no-repeat center;
 }
 .player .player__main-count .player__main-control__flex .player__main-control-play:hover {
   opacity: 0.6;
@@ -555,7 +555,7 @@ body {
   display: flex;
 }
 .flex-tickets .image-tickets {
-  background: url(../../image/tickets/tickets.png) no-repeat center;
+  background: url(../image/tickets/tickets.png) no-repeat center;
   width: 720px;
   height: 550px;
 }
@@ -666,7 +666,7 @@ body {
 
 .paralax {
   margin: 75px auto;
-  background: url(../../image/tickets/parallax1.png) no-repeat center;
+  background: url(../image/tickets/parallax1.png) no-repeat center;
   height: 400px;
   width: 1920px;
 }
@@ -714,7 +714,7 @@ body {
 .form-buy-columns .form-buy-columns__left .form-buy__logo {
   width: 85px;
   height: 41px;
-  background: url(../../image/tickets-buy/logo.svg) no-repeat center;
+  background: url(../image/tickets-buy/logo.svg) no-repeat center;
 }
 .form-buy-columns .form-buy-columns__left .form-buy__title {
   color: #9d8665;
@@ -851,7 +851,7 @@ body {
   right: 30px;
   width: 150px;
   height: 120px;
-  background: url(../../image/tickets-buy/img.png) no-repeat center;
+  background: url(../image/tickets-buy/img.png) no-repeat center;
 }
 .form-buy-columns__right .result-ticket__text {
   font-family: Roboto;
@@ -1178,7 +1178,7 @@ body {
   color: #030303;
 }
 .contacts_flex .map {
-  background: url(../../image/contacts/map.png) center no-repeat;
+  background: url(../image/contacts/map.png) center no-repeat;
   width: 960px;
   height: 620px;
 }
