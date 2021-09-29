@@ -88,6 +88,10 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
+  @media (max-width: 1024px) {
+    max-width: 1024px;
+    padding: 0 20px;
+  }
 }
 .logo {
   display: flex;
@@ -96,7 +100,7 @@ body {
     display: block;
     height: 26px;
     width: 49px;
-    background: url(../../image/main/logo.png) no-repeat center;
+    background: url(../image/main/logo.png) no-repeat center;
   }
   .logo__title {
     color: $color-wite;
@@ -115,12 +119,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  .menu-burger {
+    height: 18px;
+    width: 32px;
+    position: absolute;
+    top: 56px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    .menu-burger__item {
+      height: 2px;
+      width: 32px;
+      background-color: white;
+    }
+  }
   .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 775px;
+
     .nav__item a {
       color: $color-wite;
       font-family: $roboto;
@@ -128,12 +148,18 @@ body {
       font-size: 22px;
       line-height: 26px;
       letter-spacing: 2px;
+      @media (max-width: 1024px) {
+        visibility: hidden;
+      }
     }
     .nav__item-link:hover {
       color: #9d8665;
     }
     .nav__item-link:active {
       color: #7e6c51;
+    }
+    @media (max-width: 1024px) {
+      visibility: hidden;
     }
   }
 }
@@ -146,7 +172,7 @@ body {
   text-transform: uppercase;
 }
 .welcome__count {
-  background: url(../../image/main/picture1.png) no-repeat right;
+  background: url(../image/main/picture1.png) no-repeat right;
   padding: 182px 0 272px 0;
   .welcome__title {
     max-width: 600px;
@@ -236,7 +262,7 @@ body {
     height: 10px;
 
     .scrole__arows-left {
-      background: url(../../image/main/left.png) no-repeat center;
+      background: url(../image/main/left.png) no-repeat center;
       display: block;
       width: 30px;
       height: 8px;
@@ -244,7 +270,7 @@ body {
     }
 
     .scrole__arows-right {
-      background: url(../../image/main/right.png) no-repeat center;
+      background: url(../image/main/right.png) no-repeat center;
       display: block;
       width: 30px;
       height: 8px;
@@ -335,7 +361,7 @@ body {
     }
   }
   .explore__picture {
-    background: url(../../image/info/Rectangle.png) no-repeat center;
+    background: url(../image/info/Rectangle.png) no-repeat center;
     width: 720px;
     height: 700px;
     margin-top: 15px;
@@ -392,7 +418,7 @@ body {
       align-items: center;
     }
     .player__main-control__flex {
-      width: 1440px;
+      max-width: 1440px;
       height: 88px;
       margin-top: -3px;
       background-color: $color-black;
@@ -402,7 +428,7 @@ body {
         height: 27px;
         width: 30px;
         margin-left: 30px;
-        background: url(../../image/video/play.png) no-repeat center;
+        background: url(../image/video/play.png) no-repeat center;
       }
       .player__main-control-play:hover {
         opacity: 0.6;
@@ -558,7 +584,7 @@ body {
   display: flex;
 
   .image-tickets {
-    background: url(../../image/tickets/tickets.png) no-repeat center;
+    background: url(../image/tickets/tickets.png) no-repeat center;
     width: 720px;
     height: 550px;
   }
@@ -670,7 +696,7 @@ body {
 }
 .paralax {
   margin: 75px auto;
-  background: url(../../image/tickets/parallax1.png) no-repeat center;
+  background: url(../image/tickets/parallax1.png) no-repeat center;
   height: 400px;
   width: 1920px;
 }
@@ -716,7 +742,7 @@ body {
     .form-buy__logo {
       width: 85px;
       height: 41px;
-      background: url(../../image/tickets-buy/logo.svg) no-repeat center;
+      background: url(../image/tickets-buy/logo.svg) no-repeat center;
     }
     .form-buy__title {
       color: $color-gold;
@@ -855,7 +881,7 @@ body {
     right: 30px;
     width: 150px;
     height: 120px;
-    background: url(../../image/tickets-buy/img.png) no-repeat center;
+    background: url(../image/tickets-buy/img.png) no-repeat center;
   }
   .result-ticket__text {
     font-family: $roboto;
@@ -1180,7 +1206,7 @@ body {
     }
   }
   .map {
-    background: url(../../image/contacts/map.png) center no-repeat;
+    background: url(../image/contacts/map.png) center no-repeat;
     width: 960px;
     height: 620px;
   }
