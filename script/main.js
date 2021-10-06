@@ -22,46 +22,66 @@ function onMenuLinkClick(e) {
 
 //выдвижение формы покупки билетов
 
-const btnOpenPanelBuyTicket = document.querySelector('.amount-tickets__button') //кнопка покупки билетов
-const buyPanel = document.querySelector('.form-buy')
-const btnClosePanelBuyTicket = document.querySelector('.form-buy__close')
+// const btnOpenPanelBuyTicket = document.querySelector('.amount-tickets__button') //кнопка покупки билетов
+// const buyPanel = document.querySelector('.form-buy')
+// const btnClosePanelBuyTicket = document.querySelector('.form-buy__close')
 
-btnOpenPanelBuyTicket.addEventListener('click', () => {
-  //открытие формы покупки билетов
-  buyPanel.classList.add('form-buy__active')
+// btnOpenPanelBuyTicket.addEventListener('click', () => {
+//   //открытие формы покупки билетов
+//   buyPanel.classList.add('form-buy__active')
+// })
+
+// btnClosePanelBuyTicket.addEventListener('click', () => {
+//   //закрытие формы покупки билетов
+//   buyPanel.classList.remove('form-buy__active')
+// })
+
+// //меню бургер
+// const hederBurgerButton = document.querySelector('.menu-burger')
+// const hederNav = document.querySelector('.nav')
+// const hederTitle = document.querySelector('.welcome__title')
+// const hederText = document.querySelector('.welcome__text')
+// const hederButton = document.querySelector('.welcome__button')
+
+// hederBurgerButton.addEventListener('click', () => {
+//   hederNav.classList.add('nav-active')
+//   hederBurgerButton.classList.remove('menu-burger')
+//   hederBurgerButton.classList.add('menu-burger-active')
+//   hederBurgerClose = document.querySelector('.menu-burger-active')
+//   hederBurgerClose.addEventListener('click', closeNav)
+//   hederNav.style.left = '0'
+//   hederTitle.style.display = 'none'
+//   hederText.style.display = 'none'
+//   hederButton.style.display = 'none'
+// })
+
+// function closeNav() {
+//   hederBurgerClose = hederNav.classList.remove('nav-active')
+//   hederNav.style.left = '-100%'
+//   hederBurgerButton.classList.remove('menu-burger-active')
+//   hederBurgerButton.classList.add('menu-burger')
+//   hederTitle.style.display = 'block'
+//   hederText.style.display = 'block'
+//   hederButton.style.display = 'block'
+//   hederBurgerClose = ''
+// }
+
+////////////////// слайдер welcom ///////////////////
+
+let myImageSlider = new Swiper('.image-slider', {
+  navigation: {
+    nextEl: '.slider-arrow__right',
+    prevEl: '.slider-arrow__left',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  loop: true,
 })
 
-btnClosePanelBuyTicket.addEventListener('click', () => {
-  //закрытие формы покупки билетов
-  buyPanel.classList.remove('form-buy__active')
+let elcomSlideNowSlids = document.querySelector('.slid-number__activ')
+myImageSlider.on('slideChange', function () {
+  let currentSlide = ++myImageSlider.realIndex
+  elcomSlideNowSlids.innerHTML = `0` + currentSlide
 })
-
-//меню бургер
-const hederBurgerButton = document.querySelector('.menu-burger')
-const hederNav = document.querySelector('.nav')
-const hederTitle = document.querySelector('.welcome__title')
-const hederText = document.querySelector('.welcome__text')
-const hederButton = document.querySelector('.welcome__button')
-
-hederBurgerButton.addEventListener('click', () => {
-  hederNav.classList.add('nav-active')
-  hederBurgerButton.classList.remove('menu-burger')
-  hederBurgerButton.classList.add('menu-burger-active')
-  hederBurgerClose = document.querySelector('.menu-burger-active')
-  hederBurgerClose.addEventListener('click', closeNav)
-  hederNav.style.left = '0'
-  hederTitle.style.display = 'none'
-  hederText.style.display = 'none'
-  hederButton.style.display = 'none'
-})
-
-function closeNav() {
-  hederBurgerClose = hederNav.classList.remove('nav-active')
-  hederNav.style.left = '-100%'
-  hederBurgerButton.classList.remove('menu-burger-active')
-  hederBurgerButton.classList.add('menu-burger')
-  hederTitle.style.display = 'block'
-  hederText.style.display = 'block'
-  hederButton.style.display = 'block'
-  hederBurgerClose = ''
-}

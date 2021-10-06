@@ -273,11 +273,85 @@ body {
     line-height: 40px;
   }
 }
+.welcom-flex {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
+  padding: 32px 0 60px 0;
+}
+.swiper-wrapper {
+  position: static;
+}
+#image-slider {
+  position: static;
+
+  .image-slider__image {
+    text-align: end;
+
+    img {
+      position: relative;
+    }
+    .slider-opasity {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+.slider-control {
+  background-color: black;
+  padding: 0 15px;
+  height: 120px;
+  width: 600px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 32px;
+  font-family: $roboto;
+  .swiper-pagination {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 9px;
+    width: 200px !important;
+    .swiper-pagination-bullet {
+      height: 16px;
+      width: 16px;
+      border-radius: 0%;
+      background-color: white;
+      transition: background 0.3s ease;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      background: #d2b183;
+    }
+  }
+}
+
+.slider-arrow {
+  .slider-arrow__left {
+    width: 50px;
+    height: 20px;
+    background: url(../../image/main/left.png) no-repeat center;
+  }
+  .slider-arrow__right {
+    width: 50px;
+    height: 20px;
+    background: url(../../image/main/right.png) no-repeat center;
+  }
+}
 .welcome__count {
-  background: url(../image/main/picture1.png) no-repeat right;
+  position: absolute;
   padding: 182px 0 272px 0;
+  z-index: 50;
   @media (max-width: 1024px) {
-    background: url(../image/main/picture2.png) no-repeat right;
     padding: 0 0 0 0;
     height: 525px;
   }
@@ -353,23 +427,7 @@ body {
     background-color: #9d8665;
   }
 }
-.welcome-ing__764 {
-  visibility: hidden;
-  display: none;
-  @media (max-width: 768px) {
-    display: block;
-  }
-  img {
-    @media (max-width: 768px) {
-      display: block;
-      margin: 0 auto;
-      width: 100%;
-    }
-  }
-  @media (max-width: 768px) {
-    visibility: visible;
-  }
-}
+
 .scrole {
   position: absolute;
   right: 0;

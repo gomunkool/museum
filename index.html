@@ -17,6 +17,10 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <title>Museum</title>
   </head>
   <body>
@@ -66,15 +70,97 @@
             </ul>
           </nav>
         </header>
-        <div class="welcome__count">
-          <h2 class="welcome__title title">Welcome <br />to the Louvre</h2>
-          <div class="welcome__text">From the castle to the museum</div>
-          <button class="welcome__button">Discover the Louvre</button>
+        <div class="welcom-flex">
+          <div class="welcome__count">
+            <h2 class="welcome__title title">Welcome <br />to the Louvre</h2>
+            <div class="welcome__text">From the castle to the museum</div>
+            <button class="welcome__button">Discover the Louvre</button>
+          </div>
+          <div id="image-slider" class="image-slider swiper">
+            <div class="image-slider__wriper swiper-wrapper">
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img src="image/main/slider/1.jpg" alt="picture" />
+                  <img
+                    class="slider-opasity"
+                    src="image/main/slider/overlay(1).webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img src="image/main/slider/2.jpg" alt="picture" />
+                  <img
+                    class="slider-opasity"
+                    src="image/main/slider/overlay(1).webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img src="image/main/slider/3.jpg" alt="picture" />
+                  <img
+                    class="slider-opasity"
+                    src="image/main/slider/overlay(1).webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img src="image/main/slider/4.jpg" alt="picture" />
+                  <img
+                    class="slider-opasity"
+                    src="image/main/slider/overlay(1).webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img src="image/main/slider/5.jpg" alt="picture" />
+                  <img
+                    class="slider-opasity"
+                    src="image/main/slider/overlay(1).webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="slider-control">
+              <div class="slid-number">
+                <span class="slid-number__activ">01</span>
+                <span>|</span>
+                <span class="slid-number__total">05</span>
+              </div>
+              <div class="swiper-pagination">
+                <div class="swiper-pagination__button active-slide"></div>
+                <div class="swiper-pagination__button"></div>
+                <div class="swiper-pagination__button"></div>
+                <div class="swiper-pagination__button"></div>
+                <div class="swiper-pagination__button"></div>
+              </div>
+              <div class="slider-arrow">
+                <button class="slider-arrow__left"></button>
+                <button class="slider-arrow__right"></button>
+              </div>
+            </div>
+
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
         </div>
-        <div class="welcome-ing__764">
-          <img src="image/main/picture3.png" alt="picture" />
-        </div>
-        <div class="scrole">
+
+        <!-- <div class="scrole">
           <div class="scrole__numbers">
             <div class="scrole__number scrole__numbers-now">01</div>
             <div class="scrole__number scrole__numbers-max">05</div>
@@ -90,12 +176,12 @@
             <button class="scrole__arows-left"></button>
             <button class="scrole__arows-right"></button>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- Visiting  -->
     <main>
-      <section class="visiting">
+      <!-- <section class="visiting">
         <div class="countaner">
           <h2 class="slider__title title">Virtual tour</h2>
           <div class="plases">
@@ -149,9 +235,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Explore  -->
-      <section class="explore">
+      <!-- <section class="explore">
         <div class="countaner">
           <div class="explore__flex">
             <div class="explore__info">
@@ -178,9 +264,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Video -->
-      <section class="video">
+      <!-- <section class="video">
         <div class="countaner">
           <div class="video__flex">
             <h2 class="video__title title">Video journey</h2>
@@ -199,9 +285,9 @@
               ></video>
               <button class="player__main-play">
                 <img src="image/video/play-main.png" alt="play" />
-              </button>
-              <!-- управление плеером -->
-              <!-- <div class="player__main-control__flex">
+              </button> -->
+      <!-- управление плеером -->
+      <!-- <div class="player__main-control__flex">
                 <button class="player__main-control-play"></button>
                 <input type="range" class="player__main-control-input-time" />
                 <button class="player__main-control-volume">
@@ -244,9 +330,9 @@
                     alt="fullscreen"
                   />
                 </button>
-              </div> -->
-            </div>
-            <div class="player__flex">
+              </div> 
+             </div> -->
+      <!-- <div class="player__flex">
               <div class="player__flex-item">
                 <iframe
                   src="https://www.youtube.com/embed/aWmJ5DgyWPI"
@@ -274,8 +360,8 @@
                   allowfullscreen
                 ></iframe>
               </div>
-            </div>
-          </div>
+            </div> -->
+      <!-- </div>
           <div class="video__scrole">
             <button class="video__scrole-left">
               <img src="image/video/left.png" alt="left" />
@@ -290,9 +376,9 @@
             </button>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Gallery -->
-      <section class="gallery">
+      <!-- <section class="gallery">
         <div class="curtain__wite"></div>
         <div class="countaner">
           <div class="curtain"></div>
@@ -345,9 +431,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Tickets -->
-      <section class="tickets">
+      <!-- <section class="tickets">
         <div class="countaner">
           <h2 class="tickets__title title">BUY TICKETS</h2>
           <div class="flex-tickets">
@@ -443,9 +529,9 @@
           </div>
         </div>
         <div class="paralax"></div>
-      </section>
+      </section> -->
       <!-- Booking tickets -->
-      <form class="form-buy">
+      <!-- <form class="form-buy">
         <button class="form-buy__close">
           <img
             class="form-buy__close-line"
@@ -770,9 +856,9 @@
             </div>
           </div>
         </div>
-      </form>
+      </form> -->
       <!-- Contacts -->
-      <section class="contacts">
+      <!-- <section class="contacts">
         <div class="countaner">
           <h2 class="contacts__title title">Contacts</h2>
           <div class="contacts_flex">
@@ -790,12 +876,12 @@
             <div class="map"></div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <!-- footer -->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="countaner">
         <div class="footer__flex">
           <div class="logo">
@@ -873,7 +959,9 @@
           <div class="mi">Gomunkool</div>
         </div>
       </div>
-    </footer>
+    </footer> -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
     <script src="script/main.js"></script>
   </body>
 </html>
