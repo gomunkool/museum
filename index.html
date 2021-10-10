@@ -25,7 +25,7 @@
   </head>
   <body>
     <!-- welcome -->
-    <section class="welcome">
+    <!-- <section class="welcome">
       <div class="countaner">
         <header class="header">
           <div class="logo">
@@ -148,19 +148,16 @@
               </div>
             </div>
 
-            <!-- If we need pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
+    <!-- <div class="swiper-pagination"></div> -->
 
-            <!-- If we need navigation buttons -->
-            <!-- <div class="swiper-button-prev"></div>
+    <!-- <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div> -->
 
-            <!-- If we need scrollbar -->
-            <!-- <div class="swiper-scrollbar"></div> -->
-          </div>
-        </div>
+    <!-- <div class="swiper-scrollbar"></div> -->
+    <!-- </div>
+        </div> -->
 
-        <!-- <div class="scrole">
+    <!-- <div class="scrole">
           <div class="scrole__numbers">
             <div class="scrole__number scrole__numbers-now">01</div>
             <div class="scrole__number scrole__numbers-max">05</div>
@@ -177,8 +174,9 @@
             <button class="scrole__arows-right"></button>
           </div>
         </div> -->
-      </div>
-    </section>
+    <!-- </div>
+    </section> -->
+    -->
     <!-- Visiting  -->
     <main>
       <!-- <section class="visiting">
@@ -433,7 +431,7 @@
         </div>
       </section> -->
       <!-- Tickets -->
-      <!-- <section class="tickets">
+      <section class="tickets">
         <div class="countaner">
           <h2 class="tickets__title title">BUY TICKETS</h2>
           <div class="flex-tickets">
@@ -444,6 +442,7 @@
                 <p>
                   <input
                     type="radio"
+                    class="ticket-buy-inputs ticket-buy-inputs-radio"
                     checked
                     name="type"
                     value="Permanent exhibition"
@@ -452,6 +451,7 @@
                 </p>
                 <p>
                   <input
+                    class="ticket-buy-inputs ticket-buy-inputs-radio"
                     type="radio"
                     name="type"
                     value="Temporary exhibition"
@@ -459,6 +459,7 @@
                 </p>
                 <p>
                   <input
+                    class="ticket-buy-inputs ticket-buy-inputs-radio"
                     type="radio"
                     name="type"
                     value="Combined Admission"
@@ -471,67 +472,48 @@
               <div class="input-sum">
                 <div class="input-sum__text">Basic 18+</div>
                 <div class="input-sum__flex">
-                  <button
-                    class="input-sum_minus input-sum_button"
-                    onclick="this.nextElementSibling.stepDown()"
-                  >
-                    -
-                  </button>
                   <input
-                    class="input-sum_input"
+                    class="input-sum_input ticket-buy-inputs"
+                    id="input-sum_input__basic"
                     type="number"
                     name="basic"
                     value="1"
                     min="0"
                     max="20"
-                    readonly
                   />
-                  <button
-                    class="input-sum_plus input-sum_button"
-                    onclick="this.previousElementSibling.stepUp()"
-                  >
-                    +
-                  </button>
                 </div>
               </div>
               <div class="input-sum">
                 <div class="input-sum__text">Senior 65+</div>
                 <div class="input-sum__flex">
-                  <button
-                    class="input-sum_minus input-sum_button"
-                    onclick="this.nextElementSibling.stepDown()"
-                  >
-                    -
-                  </button>
                   <input
-                    class="input-sum_input"
+                    class="input-sum_input ticket-buy-inputs"
+                    id="input-sum_input__senior"
                     type="number"
                     name="basic"
                     value="1"
                     min="0"
                     max="20"
-                    readonly
                   />
-                  <button
-                    class="input-sum_plus input-sum_button"
-                    onclick="this.previousElementSibling.stepUp()"
-                  >
-                    +
-                  </button>
                 </div>
               </div>
               <div class="amount-total__flex">
                 <div class="amount-total__flex-text">Total €</div>
-                <div class="amount-total__flex-sum">220</div>
+                <input
+                  type="number"
+                  value="1"
+                  readonly
+                  class="amount-total__flex-sum"
+                />
               </div>
               <button class="amount-tickets__button">Buy Now</button>
             </div>
           </div>
         </div>
         <div class="paralax"></div>
-      </section> -->
+      </section>
       <!-- Booking tickets -->
-      <!-- <form class="form-buy">
+      <form class="form-buy">
         <button class="form-buy__close">
           <img
             class="form-buy__close-line"
@@ -552,33 +534,10 @@
               <div class="form-buy__text">Tour to Louvre</div>
               <div class="date-ant-time-contaner">
                 <div class="form-buy-input form-buy-input__date">
-                  <div class="form-buy-input__logo form-buy-input__logo__date">
-                    <img
-                      class="form-buy-input__logo__date__top"
-                      src="image/tickets-buy/date.svg"
-                      alt="date"
-                    />
-                    <img
-                      class="form-buy-input__logo__date__bottom"
-                      src="image/tickets-buy/date1.svg"
-                      alt="date"
-                    />
-                  </div>
                   <input type="date" class="form-buy-input__input" />
-                  <div class="form-buy-input__title">Date</div>
-                  <div class="form-buy-input__arr">
-                    <img src="image/tickets-buy/arrow.svg" alt="arrow" />
-                  </div>
                 </div>
                 <div class="form-buy-input form-buy-input__time">
-                  <div class="form-buy-input__logo">
-                    <img src="image/tickets-buy/time.svg" alt="time" />
-                  </div>
                   <input type="time" class="form-buy-input__input" />
-                  <div class="form-buy-input__title">Time</div>
-                  <div class="form-buy-input__arr">
-                    <img src="image/tickets-buy/arrow.svg" alt="arrow" />
-                  </div>
                 </div>
               </div>
 
@@ -586,100 +545,83 @@
                 <div class="form-buy-input__logo">
                   <img src="image/tickets-buy/name.svg" alt="name" />
                 </div>
-                <input type="text" class="form-buy-input__input" />
-
-                <div class="form-buy-input__title">Name</div>
+                <input
+                  type="text"
+                  class="form-buy-input__input"
+                  placeholder="Name"
+                />
               </div>
               <div class="form-buy-input form-buy-input__mail">
                 <div class="form-buy-input__logo">
                   <img src="image/tickets-buy/email.svg" alt="email" />
                 </div>
-                <input type="email" class="form-buy-input__input" />
-
-                <div class="form-buy-input__title">E-mail</div>
+                <input
+                  type="email"
+                  class="form-buy-input__input"
+                  placeholder="Email"
+                />
               </div>
               <div class="form-buy-input form-buy-input__phone">
                 <div class="form-buy-input__logo">
                   <img src="image/tickets-buy/tel.svg" alt="phone" />
                 </div>
-                <input type="text" class="form-buy-input__input" />
-
-                <div class="form-buy-input__title">Phone</div>
+                <input
+                  type="text"
+                  class="form-buy-input__input"
+                  placeholder="Phone"
+                />
               </div>
               <div class="form-buy-input form-buy-input__type">
                 <div class="form-buy-input__logo">
                   <img src="image/tickets-buy/type.svg" alt="type" />
                 </div>
-                <input type="tel" class="form-buy-input__input" />
-
-                <div class="form-buy-input__title">Ticket Type</div>
-                <div class="form-buy-input__arr">
-                  <img src="image/tickets-buy/arrow.svg" alt="arrow" />
-                </div>
+                <select name="ticket-type" id="form-buy-tickets-type">
+                  <option value="Permanent exhibition">
+                    Permanent exhibition
+                  </option>
+                  <option value="Temporary exhibition">
+                    Temporary exhibition
+                  </option>
+                  <option value="Combined Admission">Combined Admission</option>
+                </select>
               </div>
               <div class="form-buy__entry-ticket">
                 <div class="form-buy__entry-ticket__title">Entry ticket</div>
                 <div class="form-buy__entry-ticket__flex">
                   <div class="form-buy__entry-ticket__type">Basic 18+</div>
-                  <div class="form-buy__entry-ticket__total">(20 €)</div>
-                  <button
-                    class="
-                      form-buy__entry-ticket__button
-                      form-buy__entry-ticket__minus
-                    "
-                    onclick="this.nextElementSibling.stepDown()"
-                  >
-                    -
-                  </button>
+                  <input
+                    type="number"
+                    class="form-buy__entry-ticket__total"
+                    id="form-basik-cost-ferst"
+                    readonly
+                  />
+
                   <input
                     class="form-buy__entry-ticket__input"
+                    id="form-basik-change"
                     type="number"
-                    name="name"
                     value="1"
                     min="0"
                     max="20"
-                    readonly
                   />
-                  <button
-                    class="
-                      form-buy__entry-ticket__button
-                      form-buy__entry-ticket__plus
-                    "
-                    onclick="this.previousElementSibling.stepUp()"
-                  >
-                    +
-                  </button>
                 </div>
                 <div class="form-buy__entry-ticket__flex">
                   <div class="form-buy__entry-ticket__type">Senior 65+</div>
-                  <div class="form-buy__entry-ticket__total">(10 €)</div>
-                  <button
-                    class="
-                      form-buy__entry-ticket__button
-                      form-buy__entry-ticket__minus
-                    "
-                    onclick="this.nextElementSibling.stepDown()"
-                  >
-                    -
-                  </button>
+                  <input
+                    type="number"
+                    class="form-buy__entry-ticket__total"
+                    id="form-senior-cost-ferst"
+                    readonly
+                  />
                   <input
                     class="form-buy__entry-ticket__input"
+                    id="form-senior-change"
                     type="number"
-                    name="name"
+                    name="senior"
                     value="1"
                     min="0"
                     max="20"
-                    readonly
                   />
-                  <button
-                    class="
-                      form-buy__entry-ticket__button
-                      form-buy__entry-ticket__plus
-                    "
-                    onclick="this.previousElementSibling.stepUp()"
-                  >
-                    +
-                  </button>
                 </div>
               </div>
             </div>
@@ -701,37 +643,86 @@
                       alt="date"
                     />
                   </div>
-                  <div class="result-ticket__day-text">Friday, August 19</div>
+                  <input
+                    type="number"
+                    class="result-ticket__day-text"
+                    placeholder="Friday, August 19"
+                    readonly
+                  />
                 </div>
                 <div class="result-ticket__time">
                   <div class="result-ticket__time-img">
                     <img src="image/tickets-buy/time.svg" alt="time" />
                   </div>
-                  <div class="result-ticket__time-text">16 : 30</div>
+                  <input
+                    type="number"
+                    class="result-ticket__time-text"
+                    placeholder="16 : 30"
+                    readonly
+                  />
                 </div>
                 <div class="result-ticket__tick">
                   <div class="result-ticket__tick-img">
                     <img src="image/tickets-buy/tick.svg" alt="tick" />
                   </div>
-                  <div class="result-ticket__tick-text">
-                    Temporary exhibition
-                  </div>
+                  <input
+                    type="number"
+                    class="result-ticket__tick-text"
+                    id="result-ticket-type-output"
+                    placeholder="Temporary exhibition"
+                    readonly
+                  />
                 </div>
                 <div class="result-type">
-                  <div class="result-type__img">2</div>
+                  <input
+                    type="number"
+                    readonly
+                    class="result-type__img"
+                    id="form-basik-result"
+                  />
                   <div class="result-type__type">Basic</div>
-                  <div class="result-type__cost">(20 €)</div>
-                  <div class="result-type__total">40 €</div>
+                  <input
+                    type="number"
+                    readonly
+                    class="result-type__cost"
+                    id="form-basik-cost-second"
+                  />
+                  <input
+                    type="number"
+                    readonly
+                    class="result-type__total"
+                    id="form-basik-cost-total"
+                  />
                 </div>
                 <div class="result-type">
-                  <div class="result-type__img">2</div>
+                  <input
+                    type="number"
+                    readonly
+                    class="result-type__img"
+                    id="form-senior-result"
+                  />
                   <div class="result-type__type">Senior</div>
-                  <div class="result-type__cost">(10 €)</div>
-                  <div class="result-type__total">20 €</div>
+                  <input
+                    type="number"
+                    readonly
+                    class="result-type__cost"
+                    id="form-senior-cost-second"
+                  />
+                  <input
+                    type="number"
+                    readonly
+                    class="result-type__total"
+                    id="form-senior-cost-total"
+                  />
                 </div>
                 <div class="total-ticket">
                   <div class="total-ticket__taxt">Total:</div>
-                  <div class="total-ticket__total">60 €</div>
+                  <input
+                    type="number"
+                    readonly
+                    class="total-ticket__total"
+                    id="form-total-cost"
+                  />
                 </div>
               </div>
 
@@ -796,52 +787,22 @@
                   </div>
                   <div class="card-front__title">Expiration date</div>
                   <div class="card-front__inputs-count">
-                    <label class="card-front__label" for="q">
-                      <input
-                        class="card-front__number"
-                        type="number"
-                        name="name"
-                        value="03"
-                        min="01"
-                        max="12"
-                        readonly
-                      />
-                      <div class="card-front__arrows">
-                        <img
-                          class="card-front__arrow-top"
-                          src="image/tickets-buy/arrow-top.svg"
-                          alt="arrow"
-                        />
-                        <img
-                          class="card-front__arrow-bottom"
-                          src="image/tickets-buy/arrow-bottom.svg"
-                          alt="arrow"
-                        />
-                      </div>
-                    </label>
-                    <label class="card-front__label" for="q">
-                      <input
-                        class="card-front__number"
-                        type="number"
-                        name="name"
-                        value="2024"
-                        min="2021"
-                        max="2032"
-                        readonly
-                      />
-                      <div class="card-front__arrows">
-                        <img
-                          class="card-front__arrow-top"
-                          src="image/tickets-buy/arrow-top.svg"
-                          alt="arrow"
-                        />
-                        <img
-                          class="card-front__arrow-bottom"
-                          src="image/tickets-buy/arrow-bottom.svg"
-                          alt="arrow"
-                        />
-                      </div>
-                    </label>
+                    <input
+                      class="card-front__number"
+                      type="number"
+                      name="name"
+                      value="03"
+                      min="01"
+                      max="12"
+                    />
+                    <input
+                      class="card-front__number"
+                      type="number"
+                      name="name"
+                      value="2024"
+                      min="2021"
+                      max="2032"
+                    />
                   </div>
                   <div class="card-front__inpyt-text">
                     <div class="card-front__title">Cardholder name</div>
@@ -856,7 +817,7 @@
             </div>
           </div>
         </div>
-      </form> -->
+      </form>
       <!-- Contacts -->
       <!-- <section class="contacts">
         <div class="countaner">

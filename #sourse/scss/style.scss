@@ -85,6 +85,7 @@ body {
   font-family: $forum;
   overflow-x: hidden;
 }
+
 .countaner {
   max-width: 1440px;
   margin: 0 auto;
@@ -413,6 +414,7 @@ body {
     font-size: 22px;
     line-height: 26px;
     letter-spacing: 2px;
+
     @media (max-width: 1024px) {
       width: 300px;
       height: 60px;
@@ -1310,16 +1312,16 @@ body {
   position: relative;
   z-index: 20;
   background-color: $color-wite;
-  margin-top: -1000px;
+  // margin-top: -1000px;
   padding: 0 20px;
   @media (max-width: 1400px) {
-    margin-top: -800px;
+    // margin-top: -800px;
   }
   @media (max-width: 1210px) {
-    margin-top: -600px;
+    // margin-top: -600px;
   }
   @media (max-width: 1110px) {
-    margin-top: -300px;
+    // margin-top: -300px;
   }
   @media (max-width: 1024px) {
     padding: 0 0;
@@ -1491,7 +1493,7 @@ body {
           margin-bottom: 20px;
         }
         .input-sum_input {
-          width: 55px;
+          width: 100px;
           font-family: $roboto;
           font-weight: 300;
           font-size: 22px;
@@ -1521,6 +1523,7 @@ body {
       line-height: 33px;
       margin-top: 50px;
       justify-content: flex-end;
+      align-items: center;
       @media (max-width: 1024px) {
         justify-content: space-between;
         margin-top: 25px;
@@ -1532,6 +1535,16 @@ body {
         font-size: 16px;
         line-height: 19px;
         justify-content: center;
+      }
+      .amount-total__flex-text {
+        margin: 0 20px 0 0;
+      }
+      input {
+        font-size: 30px;
+        line-height: 33px;
+        font-weight: bold;
+
+        width: 100px;
       }
     }
 
@@ -1576,7 +1589,7 @@ body {
 // Booking tickets
 
 .form-buy {
-  position: fixed;
+  // position: fixed;
   max-width: 2300px;
   left: 0;
   top: 0;
@@ -1585,7 +1598,7 @@ body {
   padding: 200px 0;
   background-color: rgba(255, 255, 255, 0.5);
   transition: 1s;
-  transform: translateX(-300%);
+  // transform: translateX(-300%);
   z-index: 30;
   @media (max-width: 2000px) {
     margin: 0 0 0 500px;
@@ -1701,39 +1714,32 @@ body {
         @media (max-width: 570px) {
           width: 360px;
         }
-        .form-buy-input__logo__date {
-          position: relative;
-          height: 15px;
-          width: 15px;
-
-          .form-buy-input__logo__date__top {
-            position: absolute;
-            left: 0;
-            top: 0;
-          }
-          .form-buy-input__logo__date__bottom {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-          }
-        }
       }
-      .form-buy-input__time {
-        width: 190px;
-        @media (max-width: 984px) {
-          width: 251px;
-        }
-        @media (max-width: 570px) {
-          width: 360px;
-        }
+    }
+    .form-buy-input__time {
+      width: 190px;
+      @media (max-width: 984px) {
+        width: 251px;
+      }
+      @media (max-width: 570px) {
+        width: 360px;
       }
     }
   }
 }
+#form-buy-tickets-type {
+  font-size: 18px;
+  line-height: 21px;
+}
 .form-buy-input__input {
-  width: 1px;
-  height: 1px;
-  visibility: hidden;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 24px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .form-buy__entry-ticket {
@@ -1771,6 +1777,7 @@ body {
       color: $color-black;
     }
     .form-buy__entry-ticket__total {
+      width: 10px;
       font-family: $roboto;
       font-size: 18px;
       line-height: 21px;
@@ -1787,7 +1794,7 @@ body {
     }
     .form-buy__entry-ticket__input {
       border: 2px solid $color-black;
-      width: 45px;
+      width: 100px;
       height: 25px;
       font-size: 20px;
       font-family: $roboto;
@@ -1902,11 +1909,8 @@ body {
       font-family: $roboto;
       font-size: 18px;
       line-height: 21px;
-      color: #a4a4a3;
       width: 32px;
       height: 20px;
-      background-color: $color-black;
-      border-radius: 20%;
       text-align: center;
       margin: 0 10px 0 0;
     }
@@ -1923,12 +1927,14 @@ body {
       color: #030303;
       margin: 0 0 0 5px;
       flex: 1 1 auto;
+      width: 150px;
     }
     .result-type__total {
       font-family: $roboto;
       font-size: 22px;
       line-height: 26px;
       color: #030303;
+      width: 150px;
     }
   }
   .total-ticket {
@@ -1984,7 +1990,7 @@ body {
     .card-back__input {
       height: 35px;
       width: 75px;
-      margin: 5px 0 6px 265px;
+      margin: 5px 0 6px 245px;
       font-family: $roboto;
       font-size: 15px;
       @media (max-width: 570px) {
@@ -2058,24 +2064,7 @@ body {
       font-size: 14px;
       color: #161615;
       padding: 0 0 0 10px;
-      width: 72px;
-    }
-    .card-front__arrows {
-      background-color: $color-wite;
-      border-left: #bcbcbc solid 1px;
-      width: 28px;
-      position: relative;
-
-      .card-front__arrow-top {
-        position: absolute;
-        top: 12px;
-        left: 11px;
-      }
-      .card-front__arrow-bottom {
-        position: absolute;
-        bottom: 12px;
-        left: 11px;
-      }
+      width: 90px;
     }
   }
   .card-front__input-name {

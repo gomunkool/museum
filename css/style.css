@@ -1483,23 +1483,7 @@ body {
   position: relative;
   z-index: 20;
   background-color: #ffffff;
-  margin-top: -1000px;
   padding: 0 20px;
-}
-@media (max-width: 1400px) {
-  .tickets {
-    margin-top: -800px;
-  }
-}
-@media (max-width: 1210px) {
-  .tickets {
-    margin-top: -600px;
-  }
-}
-@media (max-width: 1110px) {
-  .tickets {
-    margin-top: -300px;
-  }
 }
 @media (max-width: 1024px) {
   .tickets {
@@ -1708,7 +1692,7 @@ body {
   }
 }
 .flex-tickets .amount-tickets .input-sum .input-sum__flex .input-sum_input {
-  width: 55px;
+  width: 100px;
   font-family: Roboto;
   font-weight: 300;
   font-size: 22px;
@@ -1736,6 +1720,7 @@ body {
   line-height: 33px;
   margin-top: 50px;
   justify-content: flex-end;
+  align-items: center;
 }
 @media (max-width: 1024px) {
   .flex-tickets .amount-tickets .amount-total__flex {
@@ -1754,6 +1739,15 @@ body {
     line-height: 19px;
     justify-content: center;
   }
+}
+.flex-tickets .amount-tickets .amount-total__flex .amount-total__flex-text {
+  margin: 0 20px 0 0;
+}
+.flex-tickets .amount-tickets .amount-total__flex input {
+  font-size: 30px;
+  line-height: 33px;
+  font-weight: bold;
+  width: 100px;
 }
 .flex-tickets .amount-tickets .amount-tickets__button {
   background-color: #030303;
@@ -1802,7 +1796,6 @@ body {
 }
 
 .form-buy {
-  position: fixed;
   max-width: 2300px;
   left: 0;
   top: 0;
@@ -1811,7 +1804,6 @@ body {
   padding: 200px 0;
   background-color: rgba(255, 255, 255, 0.5);
   transition: 1s;
-  transform: translateX(-300%);
   z-index: 30;
 }
 @media (max-width: 2000px) {
@@ -1950,39 +1942,34 @@ body {
     width: 360px;
   }
 }
-.form-buy-columns .form-buy-columns__left .date-ant-time-contaner .form-buy-input__date .form-buy-input__logo__date {
-  position: relative;
-  height: 15px;
-  width: 15px;
-}
-.form-buy-columns .form-buy-columns__left .date-ant-time-contaner .form-buy-input__date .form-buy-input__logo__date .form-buy-input__logo__date__top {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.form-buy-columns .form-buy-columns__left .date-ant-time-contaner .form-buy-input__date .form-buy-input__logo__date .form-buy-input__logo__date__bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.form-buy-columns .form-buy-columns__left .date-ant-time-contaner .form-buy-input__time {
+.form-buy-columns .form-buy-columns__left .form-buy-input__time {
   width: 190px;
 }
 @media (max-width: 984px) {
-  .form-buy-columns .form-buy-columns__left .date-ant-time-contaner .form-buy-input__time {
+  .form-buy-columns .form-buy-columns__left .form-buy-input__time {
     width: 251px;
   }
 }
 @media (max-width: 570px) {
-  .form-buy-columns .form-buy-columns__left .date-ant-time-contaner .form-buy-input__time {
+  .form-buy-columns .form-buy-columns__left .form-buy-input__time {
     width: 360px;
   }
 }
 
+#form-buy-tickets-type {
+  font-size: 18px;
+  line-height: 21px;
+}
+
 .form-buy-input__input {
-  width: 1px;
-  height: 1px;
-  visibility: hidden;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 24px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .form-buy__entry-ticket {
@@ -2025,6 +2012,7 @@ body {
   color: #030303;
 }
 .form-buy__entry-ticket .form-buy__entry-ticket__flex .form-buy__entry-ticket__total {
+  width: 10px;
   font-family: Roboto;
   font-size: 18px;
   line-height: 21px;
@@ -2041,7 +2029,7 @@ body {
 }
 .form-buy__entry-ticket .form-buy__entry-ticket__flex .form-buy__entry-ticket__input {
   border: 2px solid #030303;
-  width: 45px;
+  width: 100px;
   height: 25px;
   font-size: 20px;
   font-family: Roboto;
@@ -2159,11 +2147,8 @@ body {
   font-family: Roboto;
   font-size: 18px;
   line-height: 21px;
-  color: #a4a4a3;
   width: 32px;
   height: 20px;
-  background-color: #030303;
-  border-radius: 20%;
   text-align: center;
   margin: 0 10px 0 0;
 }
@@ -2180,12 +2165,14 @@ body {
   color: #030303;
   margin: 0 0 0 5px;
   flex: 1 1 auto;
+  width: 150px;
 }
 .form-buy-columns__right .result-type .result-type__total {
   font-family: Roboto;
   font-size: 22px;
   line-height: 26px;
   color: #030303;
+  width: 150px;
 }
 .form-buy-columns__right .total-ticket {
   display: flex;
@@ -2248,7 +2235,7 @@ body {
 .card .card-back .card-back__input {
   height: 35px;
   width: 75px;
-  margin: 5px 0 6px 265px;
+  margin: 5px 0 6px 245px;
   font-family: Roboto;
   font-size: 15px;
 }
@@ -2326,23 +2313,7 @@ body {
   font-size: 14px;
   color: #161615;
   padding: 0 0 0 10px;
-  width: 72px;
-}
-.card .card-front__label .card-front__arrows {
-  background-color: #ffffff;
-  border-left: #bcbcbc solid 1px;
-  width: 28px;
-  position: relative;
-}
-.card .card-front__label .card-front__arrows .card-front__arrow-top {
-  position: absolute;
-  top: 12px;
-  left: 11px;
-}
-.card .card-front__label .card-front__arrows .card-front__arrow-bottom {
-  position: absolute;
-  bottom: 12px;
-  left: 11px;
+  width: 90px;
 }
 .card .card-front__input-name {
   width: 320px;
