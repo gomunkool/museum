@@ -1559,7 +1559,7 @@ body {
 // Booking tickets
 
 .form-buy {
-  // position: fixed;
+  position: fixed;
   max-width: 2300px;
   left: 0;
   top: 0;
@@ -1568,7 +1568,7 @@ body {
   padding: 200px 0;
   background-color: rgba(255, 255, 255, 0.5);
   transition: 1s;
-  // transform: translateX(-300%);
+  transform: translateX(-300%);
   z-index: 30;
   @media (max-width: 2000px) {
     margin: 0 0 0 500px;
