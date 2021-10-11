@@ -902,43 +902,6 @@ body {
 .explore .explore__text span {
   color: #9d8665;
 }
-.explore .explore__picture {
-  background: url(../image/info/Rectangle.png) no-repeat center;
-  width: 720px;
-  height: 700px;
-  margin-top: 15px;
-  position: relative;
-}
-@media (max-width: 1024px) {
-  .explore .explore__picture {
-    margin: 0 auto;
-  }
-}
-@media (max-width: 768px) {
-  .explore .explore__picture {
-    max-width: 100%;
-    max-height: 705px;
-  }
-}
-@media (max-width: 420px) {
-  .explore .explore__picture {
-    background: url(../image/info/Rectangle-low.png) no-repeat center;
-    max-width: 100%;
-    max-height: 368px;
-  }
-}
-.explore .explore__picture .line {
-  position: absolute;
-  top: 0;
-  left: 421px;
-}
-@media (max-width: 420px) {
-  .explore .explore__picture .line {
-    height: 368px;
-    top: 0;
-    left: 220px;
-  }
-}
 
 .video__flex {
   display: flex;
@@ -2018,7 +1981,7 @@ body {
   line-height: 21px;
   color: #030303;
   flex: 1 1 auto;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 25px;
 }
 .form-buy__entry-ticket .form-buy__entry-ticket__flex .form-buy__entry-ticket__button {
   background-color: #030303;
@@ -2030,7 +1993,7 @@ body {
 .form-buy__entry-ticket .form-buy__entry-ticket__flex .form-buy__entry-ticket__input {
   border: 2px solid #030303;
   width: 100px;
-  height: 25px;
+  height: 28px;
   font-size: 20px;
   font-family: Roboto;
   text-align: center;
@@ -2145,7 +2108,7 @@ body {
 }
 .form-buy-columns__right .result-type .result-type__img {
   font-family: Roboto;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 21px;
   width: 32px;
   height: 20px;
@@ -2163,7 +2126,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #030303;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 35px;
   flex: 1 1 auto;
   width: 150px;
 }
@@ -2185,6 +2148,11 @@ body {
   margin: 9px 0 10px 0;
   padding: 10px 0 0 0;
   border-top: 2px solid #740c11;
+}
+.form-buy-columns__right .total-ticket input {
+  font-size: 32px;
+  line-height: 37px;
+  margin: 0 0 0 25px;
 }
 
 .card {
@@ -2506,7 +2474,6 @@ body {
   color: #030303;
 }
 .contacts_flex .map {
-  background: url(../image/contacts/map.png) center no-repeat;
   width: 960px;
   height: 620px;
   margin: 0 0 0 5px;

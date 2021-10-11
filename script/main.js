@@ -166,7 +166,6 @@ function ticketsTotalSenior(amount, type) {
 }
 function ticketsTotal(basik, senior) {
   totalCostAll = basik + senior
-
   ticketsBuyTotal.value = totalCostAll
   localStorage.setItem('totalTicketsCost', JSON.stringify(totalCostAll))
   localStorage.setItem('typeTickets', JSON.stringify(ticketType))
@@ -257,3 +256,122 @@ const formTotalCost = document.getElementById('form-total-cost')
 function resultTotalCost() {
   formTotalCost.value = +formBasikCostTotal.value + +formSeniorCostTotal.value
 }
+
+//////////выбор даты//////////
+
+const formChangeDate = document.querySelector('.form-buy-input__input')
+const formOutputDate = document.querySelector('.result-ticket__day-text')
+const formChangeDateContaner = document.querySelector('.form-buy-input__date')
+const dateNow = new Date()
+const yearNow = dateNow.getFullYear()
+const monthNow = dateNow.getMonth() + 1
+const dayNow = dateNow.getUTCDate()
+
+formChangeDate.addEventListener('input', (e) => {
+  let date = e.target.value
+  dateNumber = transformationDateStringToNumber(date)
+  checkDate(dateNumber, yearNow, monthNow, dayNow, date)
+})
+
+function transformationDateStringToNumber(date) {
+  let dateArr = date.split('-')
+  let dateArrNumber = []
+  dateArr.forEach((e) => {
+    dateArrNumber.push(+e)
+  })
+  return dateArrNumber
+}
+function checkDate(date, year, month, day, dateStr) {
+  if (date[0] < year) {
+    faultDate()
+  } else if (date[1] < month) {
+    faultDate()
+  } else if (date[2] < day) {
+    faultDate()
+  } else {
+    formOutputDate.setAttribute('placeholder', `${dateStr}`)
+    trueDate()
+  }
+}
+function faultDate() {
+  formChangeDateContaner.style.border = '3px solid red'
+  formChangeDate.value = ''
+}
+function trueDate() {
+  formChangeDateContaner.style.border = '1px solid black'
+}
+
+//////////выбор времени//////////
+const formChangeTime = document.querySelector('.form-buy-input__time')
+const formOutputTime = document.querySelector('.result-ticket__time-text')
+
+formChangeTime.addEventListener('input', (e) => {
+  let time = e.target.value
+  time = time.split(':')
+  formOutputTime.setAttribute('placeholder', `${time[0]}:${time[1]}`)
+})
+
+/////////////////проверка вализности форм///////////////////////
+
+function falseOutput(count) {
+  count.style.border = '3px solid red'
+  setTimeout(() => {
+    count.style.border = '1px solid black'
+  }, 500)
+}
+function trueOutput(count) {
+  setTimeout(() => {
+    count.style.border = '3px solid green'
+  }, 500)
+}
+
+////////проверка E-mail/////////////
+
+let regMail = /^[-\w]{3,15}@[a-zA-Z]{4,2000}\.[a-zA-Z]{2,2000}$/
+
+const formOutputEmail = document.getElementById('form-output-email')
+const formOutputEmailCont = document.querySelector('.form-buy-input__mail')
+
+formOutputEmail.addEventListener('input', () => {
+  if (!regMail.test(formOutputEmail.value)) {
+    falseOutput(formOutputEmailCont)
+  } else {
+    trueOutput(formOutputEmailCont)
+  }
+})
+
+////////проверка Telephone/////////////
+let regTel = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/
+
+const formOutputPhone = document.getElementById('form-output-phone')
+const formOutputPhoneCont = document.querySelector('.form-buy-input__phone')
+formOutputPhone.addEventListener('input', () => {
+  if (!regTel.test(formOutputPhone.value)) {
+    falseOutput(formOutputPhoneCont)
+  } else {
+    trueOutput(formOutputPhoneCont)
+  }
+})
+
+////////проверка Name/////////////
+let regName = /^[a-zA-Zа-яА-Я\s]{3,15}$/
+
+const formOutputName = document.getElementById('form-output-name')
+const formOutputNameCont = document.querySelector('.form-buy-input__name')
+
+formOutputName.addEventListener('input', () => {
+  if (!regName.test(formOutputName.value)) {
+    falseOutput(formOutputNameCont)
+  } else {
+    trueOutput(formOutputNameCont)
+  }
+})
+
+console.log(`Самоотценка: (вёрстка на этом этапе не отценивается)
+Слайдер в секции Welcome +24 (сделаны все пункты)
+Калькулятор продажи билетов в секции Tiskets +10 (всё работает)
+Калькулятор продажи билетов в форме продажи билетов +14 (всё работает, только время не смог сделать по пол часа и с 9 до 16)(знаю что вёрстка не такая как на макете, но в этом таске проверяется js и баллы за вёрстку я не дополучил на предыдущих этапах, поэтому не стал заморачиваться )
+Валидация формы +16(всё работает как указанно в таске,  только надпись не выскакивает, это не сложно, подумал краного борда хватит)
+Слайдер сравнения изображений в секции Explore +10 (выполненно всё)
+Интерактивная карта в секции Contacts +12 (подключил, стили попробовал подобрать похожие)
+`)

@@ -21,11 +21,16 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css"
+    />
+
     <title>Museum</title>
   </head>
   <body>
     <!-- welcome -->
-    <!-- <section class="welcome">
+    <section class="welcome">
       <div class="countaner">
         <header class="header">
           <div class="logo">
@@ -148,16 +153,16 @@
               </div>
             </div>
 
-    <!-- <div class="swiper-pagination"></div> -->
+            <!-- <div class="swiper-pagination"></div> -->
 
-    <!-- <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div> -->
 
-    <!-- <div class="swiper-scrollbar"></div> -->
-    <!-- </div>
-        </div> -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+        </div>
 
-    <!-- <div class="scrole">
+        <div class="scrole">
           <div class="scrole__numbers">
             <div class="scrole__number scrole__numbers-now">01</div>
             <div class="scrole__number scrole__numbers-max">05</div>
@@ -173,13 +178,13 @@
             <button class="scrole__arows-left"></button>
             <button class="scrole__arows-right"></button>
           </div>
-        </div> -->
-    <!-- </div>
-    </section> -->
-    -->
+        </div>
+      </div>
+    </section>
+
     <!-- Visiting  -->
     <main>
-      <!-- <section class="visiting">
+      <section class="visiting">
         <div class="countaner">
           <h2 class="slider__title title">Virtual tour</h2>
           <div class="plases">
@@ -233,9 +238,9 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Explore  -->
-      <!-- <section class="explore">
+      <section class="explore">
         <div class="countaner">
           <div class="explore__flex">
             <div class="explore__info">
@@ -257,14 +262,15 @@
                 </p>
               </div>
             </div>
-            <div class="explore__picture">
-              <img class="line" src="image/info/line.png" alt="line" />
+            <div class="juxtapose">
+              <img src="image/info/after.jpg" alt="after" />
+              <img src="image/info/before.jpg" alt="before" />
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Video -->
-      <!-- <section class="video">
+      <section class="video">
         <div class="countaner">
           <div class="video__flex">
             <h2 class="video__title title">Video journey</h2>
@@ -283,9 +289,9 @@
               ></video>
               <button class="player__main-play">
                 <img src="image/video/play-main.png" alt="play" />
-              </button> -->
-      <!-- управление плеером -->
-      <!-- <div class="player__main-control__flex">
+              </button>
+              <!-- управление плеером -->
+              <!-- <div class="player__main-control__flex">
                 <button class="player__main-control-play"></button>
                 <input type="range" class="player__main-control-input-time" />
                 <button class="player__main-control-volume">
@@ -328,9 +334,9 @@
                     alt="fullscreen"
                   />
                 </button>
-              </div> 
-             </div> -->
-      <!-- <div class="player__flex">
+              </div> -->
+            </div>
+            <!-- <div class="player__flex">
               <div class="player__flex-item">
                 <iframe
                   src="https://www.youtube.com/embed/aWmJ5DgyWPI"
@@ -359,7 +365,7 @@
                 ></iframe>
               </div>
             </div> -->
-      <!-- </div>
+          </div>
           <div class="video__scrole">
             <button class="video__scrole-left">
               <img src="image/video/left.png" alt="left" />
@@ -374,9 +380,9 @@
             </button>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Gallery -->
-      <!-- <section class="gallery">
+      <section class="gallery">
         <div class="curtain__wite"></div>
         <div class="countaner">
           <div class="curtain"></div>
@@ -429,7 +435,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Tickets -->
       <section class="tickets">
         <div class="countaner">
@@ -537,7 +543,12 @@
                   <input type="date" class="form-buy-input__input" />
                 </div>
                 <div class="form-buy-input form-buy-input__time">
-                  <input type="time" class="form-buy-input__input" />
+                  <input
+                    type="time"
+                    class="form-buy-input__input"
+                    min="09:00"
+                    max="18:00"
+                  />
                 </div>
               </div>
 
@@ -547,6 +558,7 @@
                 </div>
                 <input
                   type="text"
+                  id="form-output-name"
                   class="form-buy-input__input"
                   placeholder="Name"
                 />
@@ -557,6 +569,7 @@
                 </div>
                 <input
                   type="email"
+                  id="form-output-email"
                   class="form-buy-input__input"
                   placeholder="Email"
                 />
@@ -568,6 +581,7 @@
                 <input
                   type="text"
                   class="form-buy-input__input"
+                  id="form-output-phone"
                   placeholder="Phone"
                 />
               </div>
@@ -646,7 +660,7 @@
                   <input
                     type="number"
                     class="result-ticket__day-text"
-                    placeholder="Friday, August 19"
+                    placeholder=""
                     readonly
                   />
                 </div>
@@ -657,7 +671,7 @@
                   <input
                     type="number"
                     class="result-ticket__time-text"
-                    placeholder="16 : 30"
+                    placeholder=""
                     readonly
                   />
                 </div>
@@ -819,7 +833,7 @@
         </div>
       </form>
       <!-- Contacts -->
-      <!-- <section class="contacts">
+      <section class="contacts">
         <div class="countaner">
           <h2 class="contacts__title title">Contacts</h2>
           <div class="contacts_flex">
@@ -834,15 +848,23 @@
                 <a href="mailto:info@louvre.fr">mail: info@louvre.fr</a>
               </p>
             </div>
-            <div class="map"></div>
+            <div class="map">
+              <iframe
+                width="100%"
+                height="620px"
+                src="https://api.mapbox.com/styles/v1/gomunkool/ckun5qz3s19dn17ryzzxjdra3.html?title=false&access_token=pk.eyJ1IjoiZ29tdW5rb29sIiwiYSI6ImNrdW40dGZ1cjB6bXUyc21vZ2g2MzV3ankifQ.laJl4F-hlVa9xW79nWS0Fg&zoomwheel=false#18.17/48.8601/2.333193"
+                title="Basic-copy"
+                style="border: none"
+              ></iframe>
+            </div>
           </div>
         </div>
-      </section> -->
+      </section>
     </main>
 
     <!-- footer -->
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="countaner">
         <div class="footer__flex">
           <div class="logo">
@@ -920,9 +942,9 @@
           <div class="mi">Gomunkool</div>
         </div>
       </div>
-    </footer> -->
+    </footer>
+    <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
     <script src="script/main.js"></script>
   </body>
 </html>
